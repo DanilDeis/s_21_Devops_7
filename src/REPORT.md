@@ -4,11 +4,11 @@
 
 Отображение всех images и контейнеров, которые запущены.
 
-![Нажми сюда](https://ibb.co/KxQZPLmJ][img]https://i.ibb.co/KxQZPLmJ/2-report.png)
+![Нажми сюда](https://i.ibb.co/KxQZPLmJ/2-report.png)
 
 Все образы.
 
-![Нажми сюда](https://ibb.co/8g2XkLsv][img]https://i.ibb.co/8g2XkLsv/3-report.png)
+![Нажми сюда](https://i.ibb.co/8g2XkLsv/3-report.png)
 
 Размер образа services-report-service первым способом.
 
@@ -67,5 +67,4 @@ Vagrantfile c прописанным копирование исходного �
 ![Нажми сюда](https://i.ibb.co/R40GspPL/15-report.png)
 
 Отсутствие машины.
-
-[url=https://ibb.co/nsG7J1sQ][img]https://i.ibb.co/nsG7J1sQ/5-report.png[/img][/url] [url=https://ibb.co/QvYqT7T4][img]https://i.ibb.co/QvYqT7T4/6-report.png[/img][/url] [url=https://ibb.co/bjsphTHh][img]https://i.ibb.co/bjsphTHh/7-report.png[/img][/url] [url=https://ibb.co/gFrHxnXN][img]https://i.ibb.co/gFrHxnXN/8-report.png[/img][/url] [url=https://ibb.co/Q37pzC8C][img]https://i.ibb.co/Q37pzC8C/9-report.png[/img][/url] [url=https://ibb.co/wNhqfrL8][img]https://i.ibb.co/wNhqfrL8/10-report.png[/img][/url] [url=https://ibb.co/Xr0rH5Zg][img]https://i.ibb.co/Xr0rH5Zg/11-report.png[/img][/url] [url=https://ibb.co/8gqrWWWJ][img]https://i.ibb.co/8gqrWWWJ/12-report.png[/img][/url] [url=https://ibb.co/ycFcq5vN][img]https://i.ibb.co/ycFcq5vN/13-report.png[/img][/url] [url=https://ibb.co/7d1CRsBn][img]https://i.ibb.co/7d1CRsBn/14-report.png[/img][/url] [url=https://ibb.co/R40GspPL][img]https://i.ibb.co/R40GspPL/15-report.png[/img][/url] [url=https://ibb.co/BVZSg1YH][img]https://i.ibb.co/BVZSg1YH/1-report.png[/img][/url] [url=https://ibb.co/KxQZPLmJ][img]https://i.ibb.co/KxQZPLmJ/2-report.png[/img][/url] [url=https://ibb.co/8g2XkLsv][img]https://i.ibb.co/8g2XkLsv/3-report.png[/img][/url] [url=https://ibb.co/B5fktHfx][img]https://i.ibb.co/B5fktHfx/4-report.png[/img][/url]
+ы
