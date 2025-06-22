@@ -4,11 +4,11 @@
 
 Отображение всех images и контейнеров, которые запущены.
 
-![Нажми сюда](https://disk.yandex.ru/i/sOAkYi31E75Agg)
+![Нажми сюда](https://ibb.co/KxQZPLmJ][img]https://i.ibb.co/KxQZPLmJ/2-report.png)
 
 Все образы.
 
-![Нажми сюда](https://disk.yandex.ru/i/PYnBKphYVxXZXw)
+![Нажми сюда](https://ibb.co/8g2XkLsv][img]https://i.ibb.co/8g2XkLsv/3-report.png)
 
 Размер образа services-report-service первым способом.
 
