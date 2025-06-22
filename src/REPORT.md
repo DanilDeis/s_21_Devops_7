@@ -8,7 +8,7 @@
 
 Все образы.
 
-![Нажми сюда](https://i.ibb.co/8g2XkLsv/3-report.png)
+![Нажми сюда](https://i.ibb.co/HTYXZf4w/3-report.png)
 
 Размер образа services-report-service первым способом.
 
