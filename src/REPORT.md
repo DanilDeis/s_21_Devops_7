@@ -16,6 +16,7 @@
 
 Размер образа services-report-service вторым способом.
 
+
 ![Нажми сюда](images/5_report.png)
 
 Написанный файл docker-compose.yaml для разворачивания сервисов.
