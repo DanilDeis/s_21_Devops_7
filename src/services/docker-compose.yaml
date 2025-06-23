@@ -1,0 +1,145 @@
+services:
+  session-service:
+    ports:
+      - "8081:8081"
+    build:
+      context: session-service
+      dockerfile: Dockerfile
+    environment:
+      POSTGRES_HOST: ${POSTGRES_HOST}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_PORT: ${POSTGRES_PORT}
+      POSTGRES_USER: ${POSTGRES_USER} 
+      POSTGRES_DB: users_db
+    networks:
+      - my-network
+  hotel-service:
+    ports:
+      - "8082:8082"
+    build:
+      context: hotel-service
+      dockerfile: Dockerfile
+    environment:
+      POSTGRES_HOST: ${POSTGRES_HOST}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_PORT: ${POSTGRES_PORT}
+      POSTGRES_USER: ${POSTGRES_USER} 
+      POSTGRES_DB: hotels_db
+    networks:
+      - my-network
+  payment-service:
+    ports:
+      - "8084:8084"
+    build:
+      context: payment-service
+      dockerfile: Dockerfile
+    environment:
+      POSTGRES_HOST: ${POSTGRES_HOST}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_PORT: ${POSTGRES_PORT}
+      POSTGRES_USER: ${POSTGRES_USER} 
+      POSTGRES_DB: payments_db
+    networks:
+      - my-network
+  loyalty-service:
+    ports:
+      - "8085:8085"
+    build:
+      context: loyalty-service
+      dockerfile: Dockerfile
+    environment:
+      POSTGRES_HOST: ${POSTGRES_HOST}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_PORT: ${POSTGRES_PORT}
+      POSTGRES_USER: ${POSTGRES_USER} 
+      POSTGRES_DB: balances_db
+    networks:
+      - my-network
+  report-service:
+      ports:
+        - "8086:8086"
+      build:
+        context: report-service
+        dockerfile: Dockerfile 
+      environment:
+          POSTGRES_HOST: ${POSTGRES_HOST}
+          POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+          POSTGRES_PORT: ${POSTGRES_PORT}
+          POSTGRES_USER: ${POSTGRES_USER} 
+          POSTGRES_DB: statistics_db
+          RABBIT_MQ_HOST: ${RABBIT_MQ_HOST}
+          RABBIT_MQ_PORT: ${RABBIT_MQ_PORT}
+          RABBIT_MQ_USER: ${RABBIT_MQ_USER}
+          RABBIT_MQ_PASSWORD: ${RABBIT_MQ_PASSWORD}
+          RABBIT_MQ_QUEUE_NAME: ${RABBIT_MQ_QUEUE_NAME}
+          RABBIT_MQ_EXCHANGE: ${RABBIT_MQ_EXCHANGE}
+      networks:
+      - my-network
+  booking-service:
+      ports:
+        - "8083:8083"
+      build:
+        context: booking-service
+        dockerfile: Dockerfile 
+      environment:
+          POSTGRES_HOST: ${POSTGRES_HOST}
+          POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+          POSTGRES_PORT: ${POSTGRES_PORT}
+          POSTGRES_USER: ${POSTGRES_USER} 
+          POSTGRES_DB: reservations_db
+          RABBIT_MQ_HOST: ${RABBIT_MQ_HOST}
+          RABBIT_MQ_PORT: ${RABBIT_MQ_PORT}
+          RABBIT_MQ_USER: ${RABBIT_MQ_USER}
+          RABBIT_MQ_PASSWORD: ${RABBIT_MQ_PASSWORD}
+          RABBIT_MQ_QUEUE_NAME: ${RABBIT_MQ_QUEUE_NAME}
+          RABBIT_MQ_EXCHANGE: ${RABBIT_MQ_EXCHANGE}
+          HOTEL_SERVICE_HOST: hotel-service
+          HOTEL_SERVICE_PORT: 8082
+          PAYMENT_SERVICE_HOST: payment-service
+          PAYMENT_SERVICE_PORT: 8084
+          LOYALTY_SERVICE_HOST: loyalty-service
+          LOYALTY_SERVICE_PORT: 8085
+      networks:
+      - my-network
+  database:
+    container_name: my-postgres-db
+    ports:
+      - "5432:5432"
+    build:
+      context: database
+      dockerfile: Dockerfile
+    environment:
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    networks:
+      - my-network
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    ports:
+      - "5672:5672"
+    networks:
+      - my-network
+  gateway-service:
+    ports:
+      - "8087:8087"
+    build:
+      context: gateway-service
+      dockerfile: Dockerfile 
+    environment:
+        SESSION_SERVICE_HOST: session-service
+        SESSION_SERVICE_PORT: 8081
+        HOTEL_SERVICE_HOST: hotel-service
+        HOTEL_SERVICE_PORT: 8082
+        BOOKING_SERVICE_HOST: booking-service
+        BOOKING_SERVICE_PORT: 8083
+        PAYMENT_SERVICE_HOST: payment-service
+        PAYMENT_SERVICE_PORT: 8084
+        LOYALTY_SERVICE_HOST: loyalty-service
+        LOYALTY_SERVICE_PORT: 8085
+        REPORT_SERVICE_HOST: report-service
+        REPORT_SERVICE_PORT: 8086
+    networks:
+      - my-network
+    
+networks:
+  my-network:
+    driver: bridge
