@@ -2,35 +2,35 @@
 
 ![Нажми сюда](images/1_report.png)
 
-**Отображение всех images и контейнеров, которые запущены.**
+***Отображение всех images и контейнеров, которые запущены.**
 
 
 ![Нажми сюда](https://i.ibb.co/KxQZPLmJ/2-report.png)
 
-**Все образы.**
+***Все образы.**
 
 
 ![Нажми сюда](https://i.ibb.co/HTYXZf4w/3-report.png)
-**Размер образа services-report-service первым способом.**
+***Размер образа services-report-service первым способом.**
 
 
 ![Нажми сюда](images/4_report.png)
-**Размер образа services-report-service вторым способом.**
+***Размер образа services-report-service вторым способом.**
 
 
 ![Нажми сюда](https://i.ibb.co/nsG7J1sQ/5-report.png)
 
-**Написанный файл docker-compose.yaml для разворачивания сервисов.**
+***Написанный файл docker-compose.yaml для разворачивания сервисов.**
 
 
 ![Нажми сюда](https://i.ibb.co/QvYqT7T4/6-report.png)
 
-**Показ запущенных контейнеров.**
+***Показ запущенных контейнеров.**
 
 
 ![Нажми сюда](images/7_report.png)
 
-**Показ, что все тесты через Postman проходят.** 
+***Показ, что все тесты через Postman проходят.** 
 
 ## Part 2. Создание виртуальных машин
 
@@ -39,42 +39,42 @@
 
 ![Нажми сюда](images/8_report.png)
 
-**Создание в проекте папки vargrant.**
+***Создание в проекте папки vargrant.**
 
 
 ![Нажми сюда](https://i.ibb.co/jk3HTv09/9-report.png)
-**Показ, что vagrant скачен.**
+***Показ, что vagrant скачен.**
 
 
 ![Нажми сюда](https://i.ibb.co/wNhqfrL8/10-report.png)
 
-**Vagrantfile c прописанным копирование исходного кода проекта во внутрь виртуальной машины.**
+***Vagrantfile c прописанным копирование исходного кода проекта во внутрь виртуальной машины.**
 
 
 ![Нажми сюда](https://i.ibb.co/Xr0rH5Zg/11-report.png)
 
-**Показ, что машина VB через vargrant запущена.**
+***Показ, что машина VB через vargrant запущена.**
 
 
 ![Нажми сюда](images/12_report.png)
-**Подключение по ssh к виртульной машине(manager01).**
+***Подключение по ssh к виртульной машине(manager01).**
 
 
 ![Нажми сюда](images/13_report.png)
-**Показ скопированной папки src в которой находится код с проектом на виртуальной машине.** 
+***Показ скопированной папки src в которой находится код с проектом на виртуальной машине.** 
 
 Использование команды "vagrant halt" для выключения виртуальных машин созданных с помощью Vargrant.
 
 
 ![Нажми сюда](images/14_report.png)
-**Выключенные машины.**
+***Выключенные машины.**
 
 Использование команды "vagrant destroy -f" для удаления виртуальных машин.
 
 
 ![Нажми сюда](https://i.ibb.co/R40GspPL/15-report.png)
 
-**Отсутствие машины.**
+***Отсутствие машины.**
 
 ## Part 3. Создание простейшего docker swarm
 
@@ -82,54 +82,54 @@
 
 ![Нажми сюда](https://i.ibb.co/7tW7HY7q/16-report.png)
 
-**Модифицированный Vagrant файл.**
+***Модифицированный Vagrant файл.**
 
 ![Нажми сюда](https://i.ibb.co/whG22PYf/20-report.png)
 
-**Поднятые 3 машины.**
+***Поднятые 3 машины.**
 
 ![Нажми сюда](https://i.ibb.co/67c6GJp9/17-report.png)
 
-**Ипользуемые скрипты для установки докер в менеджер и воркер и инициализации docker swarm кластера.**
+***Ипользуемые скрипты для установки докер в менеджер и воркер и инициализации docker swarm кластера.**
 
 ![Нажми сюда](https://i.ibb.co/Sw6BgkGF/21-report.png)
 
-**Docker Swarm запущен и испотльзует виртуальные машины как менеджер и как воркеры.**
+***Docker Swarm запущен и испотльзует виртуальные машины как менеджер и как воркеры.**
 
 ![Нажми сюда](https://i.ibb.co/rKQht8TR/18-report.png)
 
-**Написанный новый файл docker-compose.yml основанный на образах с docker hub.**
+***Написанный новый файл docker-compose.yml основанный на образах с docker hub.**
 
 ![Нажми сюда](https://i.ibb.co/hJVT9p6Q/19-report.png)
 
-**Образы на docker hub.**
+***Образы на docker hub.**
 
 ![Нажми сюда](https://i.ibb.co/4wRVWf54/22-report.png)
 
-**Показ, что в докер сварм докер стек сервисов поднят (sudo docker stack deploy -c docker-compose.yml MyDeploy).**
+***Показ, что в докер сварм докер стек сервисов поднят (sudo docker stack deploy -c docker-compose.yml MyDeploy).**
 
 ![Нажми сюда](https://i.ibb.co/NnkJfrNh/23-report.png)
 
-**Файл конфигурации nginx, чтоб все запросы проксировались через него.**
+***Файл конфигурации nginx, чтоб все запросы проксировались через него.**
 
 Как видно из вывода команды sudo docker service ls gateway-service и session-service недоступны извне.
 
 ![Нажми сюда](https://i.ibb.co/KQ0dKp2/24-report.png)
 
-**Тесты через newman(CLI-утилита для запуска коллекций Postman).**
+***Тесты через newman(CLI-утилита для запуска коллекций Postman).**
 
 ![Нажми сюда](https://i.ibb.co/DffPptzS/25-report.png)
 
-**Распределение контейнеров по узлам.**
+***Распределение контейнеров по узлам.**
 
 Создадим файл portainer-stack.yml.
 
 ![Нажми сюда](https://i.ibb.co/HTwSzmSp/26-report.png)
 
-**Запустим стек portainer sudo docker stack deploy -c portainer-stack.yml portainer**
+***Запустим стек portainer sudo docker stack deploy -c portainer-stack.yml portainer**
 
 ![Нажми сюда](https://i.ibb.co/CpKTy1Qf/27-report.png)
 
 ![Нажми сюда](https://i.ibb.co/MkP7MN4p/28-report.png)
 
-**Визуализация через portainer  как распределены задач по узлам.**
+***Визуализация через portainer  как распределены задач по узлам.**
