@@ -45,13 +45,12 @@
 ![Нажми сюда](https://i.ibb.co/jk3HTv09/9-report.png)
 ***Показ, что vagrant скачен.**
 
-
-![Нажми сюда](https://i.ibb.co/wNhqfrL8/10-report.png)
+![Нажми сюда](https://i.ibb.co/Hpz9Vy7q/10-report.png)
 
 ***Vagrantfile c прописанным копирование исходного кода проекта во внутрь виртуальной машины.**
 
 
-![Нажми сюда](https://i.ibb.co/Xr0rH5Zg/11-report.png)
+![Нажми сюда](https://i.ibb.co/cXQGfrpY/11-report.png)
 
 ***Показ, что машина VB через vargrant запущена.**
 
@@ -72,7 +71,7 @@
 Использование команды "vagrant destroy -f" для удаления виртуальных машин.
 
 
-![Нажми сюда](https://i.ibb.co/R40GspPL/15-report.png)
+![Нажми сюда](https://i.ibb.co/jvfK1pJp/15-report.pn)
 
 ***Отсутствие машины.**
 
