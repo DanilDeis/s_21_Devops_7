@@ -4,8 +4,7 @@
 
 ***Отображение всех images и контейнеров, которые запущены.**
 
-
-![Нажми сюда](https://i.ibb.co/KxQZPLmJ/2-report.png)
+![Нажми сюда](https://i.ibb.co/mCmhsSJX/2-report.png)
 
 ***Все образы.**
 
@@ -18,12 +17,12 @@
 ***Размер образа services-report-service вторым способом.**
 
 
-![Нажми сюда](https://i.ibb.co/nsG7J1sQ/5-report.png)
+![Нажми сюда](https://i.ibb.co/gMBxgPBf/5-report.png)
 
 ***Написанный файл docker-compose.yaml для разворачивания сервисов.**
 
 
-![Нажми сюда](https://i.ibb.co/QvYqT7T4/6-report.png)
+![Нажми сюда](https://i.ibb.co/fdZ5znxK/6-report.png)
 
 ***Показ запущенных контейнеров.**
 
@@ -71,7 +70,7 @@
 Использование команды "vagrant destroy -f" для удаления виртуальных машин.
 
 
-![Нажми сюда](https://i.ibb.co/jvfK1pJp/15-report.pn)
+![Нажми сюда](https://i.ibb.co/jvfK1pJp/15-report.png)
 
 ***Отсутствие машины.**
 
