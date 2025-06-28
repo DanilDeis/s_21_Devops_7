@@ -75,3 +75,61 @@
 ![Нажми сюда](https://i.ibb.co/R40GspPL/15-report.png)
 
 **Отсутствие машины.**
+
+## Part 3. Создание простейшего docker swarm
+
+Для корректной работы Swarm на виртуальных машинах нужно было чтоб при запуске (либо вручную запускать swarm).
+
+![Нажми сюда](https://i.ibb.co/7tW7HY7q/16-report.png)
+
+Модифицированный Vagrant файл.
+
+![Нажми сюда](https://i.ibb.co/whG22PYf/20-report.png)
+
+Поднятые 3 машины.
+
+![Нажми сюда](https://i.ibb.co/67c6GJp9/17-report.png)
+
+Ипользуемые скрипты для установки докер в менеджер и воркер и инициализации docker swarm кластера.
+
+![Нажми сюда](https://i.ibb.co/Sw6BgkGF/21-report.png)
+
+Docker Swarm запущен и испотльзует виртуальные машины как менеджер и как воркеры.
+
+![Нажми сюда](https://i.ibb.co/rKQht8TR/18-report.png)
+
+Написанный новый файл docker-compose.yml основанный на образах с docker hub.
+
+![Нажми сюда](https://i.ibb.co/hJVT9p6Q/19-report.png)
+
+Образы на docker hub.
+
+![Нажми сюда](https://i.ibb.co/4wRVWf54/22-report.png)
+
+Показ, что в докер сварм докер стек сервисов поднят (sudo docker stack deploy -c docker-compose.yml MyDeploy).
+
+![Нажми сюда](https://i.ibb.co/NnkJfrNh/23-report.png)
+
+Файл конфигурации nginx, чтоб все запросы проксировались через него.
+
+Как видно из вывода команды sudo docker service ls gateway-service и session-service недоступны извне.
+
+![Нажми сюда](https://i.ibb.co/KQ0dKp2/24-report.png)
+
+Тесты через newman(CLI-утилита для запуска коллекций Postman).
+
+![Нажми сюда](https://i.ibb.co/DffPptzS/25-report.png)
+
+Распределение контейнеров по узлам.
+
+Создадим файл portainer-stack.yml.
+
+![Нажми сюда](https://i.ibb.co/HTwSzmSp/26-report.png)
+
+Запустим стек portainer sudo docker stack deploy -c portainer-stack.yml portainer
+
+![Нажми сюда](https://i.ibb.co/CpKTy1Qf/27-report.png)
+
+![Нажми сюда](https://i.ibb.co/MkP7MN4p/28-report.png)
+
+Визуализация через portainer  как распределены задач по узлам.

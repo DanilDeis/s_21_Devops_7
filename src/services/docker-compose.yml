@@ -1,0 +1,455 @@
+version: "3.8"
+services:
+  session-service:
+    image: danildeis/session-service:1.0
+    # ports:
+    #   - "8081:8081"
+    # command: ["bash", "./wait-for-it.sh", "my-postgres-db:5432", "--", "java", "-jar", "/app/app.jar"]
+    environment:
+      POSTGRES_HOST: my-postgres-db
+      POSTGRES_PORT: "5432"
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: users_db
+
+      RABBIT_MQ_HOST: rabbitmq
+      RABBIT_MQ_PORT: "5672"
+      RABBIT_MQ_USER: guest
+      RABBIT_MQ_PASSWORD: guest
+      RABBIT_MQ_QUEUE_NAME: messagequeue
+      RABBIT_MQ_EXCHANGE: messagequeue-exchange
+
+      SESSION_SERVICE_HOST: session-service
+      SESSION_SERVICE_PORT: "8081"
+      HOTEL_SERVICE_HOST: hotel-service
+      HOTEL_SERVICE_PORT: "8082"
+      BOOKING_SERVICE_HOST: booking-service
+      BOOKING_SERVICE_PORT: "8083"
+      PAYMENT_SERVICE_HOST: payment-service
+      PAYMENT_SERVICE_PORT: "8084"
+      LOYALTY_SERVICE_HOST: loyalty-service
+      LOYALTY_SERVICE_PORT: "8085"
+      REPORT_SERVICE_HOST: report-service
+      REPORT_SERVICE_PORT: "8086"
+
+      SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT: org.hibernate.dialect.PostgreSQLDialect
+    networks:
+      - my-network
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 5
+        window: 120s
+      resources:
+        limits:
+          memory: 512M
+
+  hotel-service:
+    image: danildeis/hotel-service:3.0
+    # command: ["bash", "./wait-for-it.sh", "my-postgres-db:5432", "--", "java", "-jar", "/app/app.jar"]
+    ports:
+      - "8082:8082"
+    environment:
+      POSTGRES_HOST: my-postgres-db
+      POSTGRES_PORT: "5432"
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: hotels_db
+
+      RABBIT_MQ_HOST: rabbitmq
+      RABBIT_MQ_PORT: "5672"
+      RABBIT_MQ_USER: guest
+      RABBIT_MQ_PASSWORD: guest
+      RABBIT_MQ_QUEUE_NAME: messagequeue
+      RABBIT_MQ_EXCHANGE: messagequeue-exchange
+
+      SESSION_SERVICE_HOST: session-service
+      SESSION_SERVICE_PORT: "8081"
+      HOTEL_SERVICE_HOST: hotel-service
+      HOTEL_SERVICE_PORT: "8082"
+      BOOKING_SERVICE_HOST: booking-service
+      BOOKING_SERVICE_PORT: "8083"
+      PAYMENT_SERVICE_HOST: payment-service
+      PAYMENT_SERVICE_PORT: "8084"
+      LOYALTY_SERVICE_HOST: loyalty-service
+      LOYALTY_SERVICE_PORT: "8085"
+      REPORT_SERVICE_HOST: report-service
+      REPORT_SERVICE_PORT: "8086"
+
+      SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT: org.hibernate.dialect.PostgreSQLDialect
+    networks:
+      - my-network
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 5
+        window: 120s
+      resources:
+        limits:
+          memory: 512M
+
+  payment-service:
+    image: danildeis/payment-service:3.0
+    # command: ["bash", "./wait-for-it.sh", "my-postgres-db:5432", "--", "java", "-jar", "/app/app.jar"]
+    ports:
+      - "8084:8084"
+    environment:
+      POSTGRES_HOST: my-postgres-db
+      POSTGRES_PORT: "5432"
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: payments_db
+
+      RABBIT_MQ_HOST: rabbitmq
+      RABBIT_MQ_PORT: "5672"
+      RABBIT_MQ_USER: guest
+      RABBIT_MQ_PASSWORD: guest
+      RABBIT_MQ_QUEUE_NAME: messagequeue
+      RABBIT_MQ_EXCHANGE: messagequeue-exchange
+
+      SESSION_SERVICE_HOST: session-service
+      SESSION_SERVICE_PORT: "8081"
+      HOTEL_SERVICE_HOST: hotel-service
+      HOTEL_SERVICE_PORT: "8082"
+      BOOKING_SERVICE_HOST: booking-service
+      BOOKING_SERVICE_PORT: "8083"
+      PAYMENT_SERVICE_HOST: payment-service
+      PAYMENT_SERVICE_PORT: "8084"
+      LOYALTY_SERVICE_HOST: loyalty-service
+      LOYALTY_SERVICE_PORT: "8085"
+      REPORT_SERVICE_HOST: report-service
+      REPORT_SERVICE_PORT: "8086"
+
+      SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT: org.hibernate.dialect.PostgreSQLDialect
+    networks:
+      - my-network
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 5
+        window: 120s
+      resources:
+        limits:
+          memory: 512M
+
+  loyalty-service:
+    image: danildeis/loyalty-service:4.0
+    # command: ["bash", "./wait-for-it.sh", "my-postgres-db:5432", "--", "java", "-jar", "/app/app.jar"]
+    ports:
+      - "8085:8085"
+    environment:
+      POSTGRES_HOST: my-postgres-db
+      POSTGRES_PORT: "5432"
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: balances_db
+
+      RABBIT_MQ_HOST: rabbitmq
+      RABBIT_MQ_PORT: "5672"
+      RABBIT_MQ_USER: guest
+      RABBIT_MQ_PASSWORD: guest
+      RABBIT_MQ_QUEUE_NAME: messagequeue
+      RABBIT_MQ_EXCHANGE: messagequeue-exchange
+
+      SESSION_SERVICE_HOST: session-service
+      SESSION_SERVICE_PORT: "8081"
+      HOTEL_SERVICE_HOST: hotel-service
+      HOTEL_SERVICE_PORT: "8082"
+      BOOKING_SERVICE_HOST: booking-service
+      BOOKING_SERVICE_PORT: "8083"
+      PAYMENT_SERVICE_HOST: payment-service
+      PAYMENT_SERVICE_PORT: "8084"
+      LOYALTY_SERVICE_HOST: loyalty-service
+      LOYALTY_SERVICE_PORT: "8085"
+      REPORT_SERVICE_HOST: report-service
+      REPORT_SERVICE_PORT: "8086"
+
+      SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT: org.hibernate.dialect.PostgreSQLDialect
+    networks:
+      - my-network
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 5
+        window: 120s
+      resources:
+        limits:
+          memory: 512M
+
+  report-service:
+    image: danildeis/report-service:5.0
+    # command: ["bash", "./wait-for-it.sh", "my-postgres-db:5432", "--", "java", "-jar", "/app/app.jar"]
+    ports:
+      - "8086:8086"
+    environment:
+      POSTGRES_HOST: my-postgres-db
+      POSTGRES_PORT: "5432"
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: statistics_db
+
+      RABBIT_MQ_HOST: rabbitmq
+      RABBIT_MQ_PORT: "5672"
+      RABBIT_MQ_USER: guest
+      RABBIT_MQ_PASSWORD: guest
+      RABBIT_MQ_QUEUE_NAME: messagequeue
+      RABBIT_MQ_EXCHANGE: messagequeue-exchange
+
+      SESSION_SERVICE_HOST: session-service
+      SESSION_SERVICE_PORT: "8081"
+      HOTEL_SERVICE_HOST: hotel-service
+      HOTEL_SERVICE_PORT: "8082"
+      BOOKING_SERVICE_HOST: booking-service
+      BOOKING_SERVICE_PORT: "8083"
+      PAYMENT_SERVICE_HOST: payment-service
+      PAYMENT_SERVICE_PORT: "8084"
+      LOYALTY_SERVICE_HOST: loyalty-service
+      LOYALTY_SERVICE_PORT: "8085"
+      REPORT_SERVICE_HOST: report-service
+      REPORT_SERVICE_PORT: "8086"
+
+      SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT: org.hibernate.dialect.PostgreSQLDialect
+    networks:
+      - my-network
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 5
+        window: 120s
+      resources:
+        limits:
+          memory: 512M
+
+  booking-service:
+    image: danildeis/booking-service:6.0
+    # command: ["bash", "./wait-for-it.sh", "my-postgres-db:5432", "--", "java", "-jar", "/app/app.jar"]
+    ports:
+      - "8083:8083"
+    environment:
+      POSTGRES_HOST: my-postgres-db
+      POSTGRES_PORT: "5432"
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: reservations_db
+
+      RABBIT_MQ_HOST: rabbitmq
+      RABBIT_MQ_PORT: "5672"
+      RABBIT_MQ_USER: guest
+      RABBIT_MQ_PASSWORD: guest
+      RABBIT_MQ_QUEUE_NAME: messagequeue
+      RABBIT_MQ_EXCHANGE: messagequeue-exchange
+
+      SESSION_SERVICE_HOST: session-service
+      SESSION_SERVICE_PORT: "8081"
+      HOTEL_SERVICE_HOST: hotel-service
+      HOTEL_SERVICE_PORT: "8082"
+      BOOKING_SERVICE_HOST: booking-service
+      BOOKING_SERVICE_PORT: "8083"
+      PAYMENT_SERVICE_HOST: payment-service
+      PAYMENT_SERVICE_PORT: "8084"
+      LOYALTY_SERVICE_HOST: loyalty-service
+      LOYALTY_SERVICE_PORT: "8085"
+      REPORT_SERVICE_HOST: report-service
+      REPORT_SERVICE_PORT: "8086"
+
+      SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT: org.hibernate.dialect.PostgreSQLDialect
+    networks:
+      - my-network
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 5
+        window: 120s
+      resources:
+        limits:
+          memory: 512M
+
+  my-postgres-db:
+    image: danildeis/database:7.0
+    deploy:
+      resources:
+        limits:
+          memory: 2g
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+      placement:
+        constraints:
+          - node.role == manager
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_DB: reservations_db
+    networks:
+      - my-network
+
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    ports:
+      - "5672:5672"
+    networks:
+      - my-network
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 5
+        window: 120s
+      resources:
+        limits:
+          memory: 512M
+
+  gateway-service:
+    image: danildeis/gateway-service:8.0
+    # ports:
+    #   - "8087:8087"
+    # command: ["bash", "./wait-for-it.sh", "my-postgres-db:5432", "--", "java", "-jar", "/app/app.jar"]
+    environment:
+      SESSION_SERVICE_HOST: session-service
+      SESSION_SERVICE_PORT: "8081"
+      HOTEL_SERVICE_HOST: hotel-service
+      HOTEL_SERVICE_PORT: "8082"
+      BOOKING_SERVICE_HOST: booking-service
+      BOOKING_SERVICE_PORT: "8083"
+      PAYMENT_SERVICE_HOST: payment-service
+      PAYMENT_SERVICE_PORT: "8084"
+      LOYALTY_SERVICE_HOST: loyalty-service
+      LOYALTY_SERVICE_PORT: "8085"
+      REPORT_SERVICE_HOST: report-service
+      REPORT_SERVICE_PORT: "8086"
+    networks:
+      - my-network
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 5
+        window: 120s
+      resources:
+        limits:
+          memory: 512M
+
+  nginx:
+    image:  danildeis/nginx:12.0
+    ports:
+      - "80:80"
+    depends_on:
+      - gateway-service
+      - session-service
+    networks:
+      - my-network
+networks:
+  my-network:
+    driver: overlay
+
+
+# version: '3.8'
+
+# services:
+#   postgres:
+#     image: cubikone/school21:my-postgres
+#     restart: always
+#     environment:
+#       POSTGRES_USER: postgres
+#       POSTGRES_PASSWORD: postgres
+#       POSTGRES_DB: users_db
+#     ports:
+#       - "5432:5432"
+#     volumes:
+#       - postgres-data:/var/lib/postgresql/data
+
+#   rabbitmq:
+#     image: cubikone/school21:rabbitmq
+#     restart: always
+#     ports:
+#       - "5672:5672"
+#       - "15672:15672"
+#     volumes:
+#       - rabbitmq-data:/var/lib/rabbitmq
+
+#   session-service:
+#     image: cubikone/school21:session
+#     # ports:
+#     #   - "8081:8081"
+#     depends_on:
+#       - postgres
+
+#   hotel-service:
+#     image: cubikone/school21:hotel
+#     ports:
+#       - "8082:8082"
+#     depends_on:
+#       - postgres
+
+#   payment-service:
+#     image: cubikone/school21:payment
+#     ports:
+#       - "8084:8084"
+#     depends_on:
+#       - postgres
+
+#   loyalty-service:
+#     image: cubikone/school21:loyalty
+#     ports:
+#       - "8085:8085"
+#     depends_on:
+#       - postgres
+
+#   report-service:
+#     image: cubikone/school21:report
+#     ports:
+#       - "8086:8086"
+#     depends_on:
+#       - postgres
+#       - rabbitmq
+
+#   booking-service:
+#     image: cubikone/school21:booking
+#     ports:
+#       - "8083:8083"
+#     depends_on:
+#       - postgres
+#       - rabbitmq
+#       - hotel-service
+#       - payment-service
+#       - loyalty-service
+
+#   gateway-service:
+#     image: cubikone/school21:gateway
+#     # ports:
+#     #   - "8087:8087"
+#     depends_on:
+#       - session-service
+#       - hotel-service
+#       - booking-service
+#       - payment-service
+#       - loyalty-service
+#       - report-service
+
+#   nginx:
+#     image:  danildeis/nginx:11.0
+#     ports:
+#       - "80:80"
+#     depends_on:
+#       - gateway-service
+#       - session-service
+
+# volumes:
+#   postgres-data:
+#   rabbitmq-data:
