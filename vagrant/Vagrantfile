@@ -2,44 +2,30 @@ Vagrant.configure("2") do |config|
   config.vm.box = "ubuntu/bionic64"
   config.vm.synced_folder "../", "/vagrant_data"
 
+  # Менеджер
   config.vm.define "manager01" do |manager|
     manager.vm.hostname = "manager01"
     manager.vm.network "private_network", ip: "192.168.56.101"
-    manager.vm.provision "shell", inline: <<-SHELL
-      sudo apt-get update
-      sudo apt-get install -y docker.io
-      sudo systemctl enable docker
-      sudo systemctl start docker
-      sudo docker swarm init --advertise-addr 192.168.56.101 > /vagrant_data/join_token.txt
-    SHELL
+    # manager.vm.network "forwarded_port", guest: 80, host: 8080
+    manager.vm.provider "virtualbox" do |vb|
+      vb.memory = 1024
+      vb.cpus = 1
+    end
+    manager.vm.provision "shell", path: "C:/Users/yanam/школа 21/Devops/DevOps_7.ID_1219717-1/vagrant/swarm_manager.sh"
   end
 
-  config.vm.define "worker01" do |worker1|
-    worker1.vm.hostname = "worker01"
-    worker1.vm.network "private_network", ip: "192.168.56.102"
-    worker1.vm.provision "shell", inline: <<-SHELL
-      sudo apt-get update
-      sudo apt-get install -y docker.io
-      sudo systemctl enable docker
-      sudo systemctl start docker
-      # Ждём появления токена от менеджера
-      while [ ! -f /vagrant_data/join_token.txt ]; do sleep 1; done
-      TOKEN=$(cat /vagrant_data/join_token.txt | grep 'docker swarm join' | awk '{print $5}')
-      sudo docker swarm join --token $TOKEN 192.168.56.101:2377
-    SHELL
+  # Воркеры
+  ["worker01", "worker02"].each_with_index do |worker_name, index|
+    config.vm.define worker_name do |worker|
+      worker.vm.hostname = worker_name
+      worker.vm.network "private_network", ip: "192.168.56.#{102 + index}"
+      worker.vm.provider "virtualbox" do |vb|
+        vb.memory = 1024
+        vb.cpus = 1
+      end
+      worker.vm.provision "shell", path: "C:/Users/yanam/школа 21/Devops/DevOps_7.ID_1219717-1/vagrant/docker-worker.sh"
+    end
   end
 
-  config.vm.define "worker02" do |worker2|
-    worker2.vm.hostname = "worker02"
-    worker2.vm.network "private_network", ip: "192.168.56.103"
-    worker2.vm.provision "shell", inline: <<-SHELL
-      sudo apt-get update
-      sudo apt-get install -y docker.io
-      sudo systemctl enable docker
-      sudo systemctl start docker
-      while [ ! -f /vagrant_data/join_token.txt ]; do sleep 1; done
-      TOKEN=$(cat /vagrant_data/join_token.txt | grep 'docker swarm join' | awk '{print $5}')
-      sudo docker swarm join --token $TOKEN 192.168.56.101:2377
-    SHELL
-  end
+  config.vm.boot_timeout = 600
 end
