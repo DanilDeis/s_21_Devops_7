@@ -1,0 +1,1441 @@
+[    0.000000] Linux version 4.15.0-212-generic (buildd@lcy02-amd64-083) (gcc version 7.5.0 (Ubuntu 7.5.0-3ubuntu1~18.04)) #223-Ubuntu SMP Tue May 23 13:09:22 UTC 2023 (Ubuntu 4.15.0-212.223-generic 4.15.18)
+[    0.000000] Command line: BOOT_IMAGE=/boot/vmlinuz-4.15.0-212-generic root=LABEL=cloudimg-rootfs ro console=tty1 console=ttyS0
+[    0.000000] KERNEL supported cpus:
+[    0.000000]   Intel GenuineIntel
+[    0.000000]   AMD AuthenticAMD
+[    0.000000]   Centaur CentaurHauls
+[    0.000000] [Firmware Bug]: TSC doesn't count with P0 frequency!
+[    0.000000] x86/fpu: x87 FPU will use FXSAVE
+[    0.000000] e820: BIOS-provided physical RAM map:
+[    0.000000] BIOS-e820: [mem 0x0000000000000000-0x000000000009fbff] usable
+[    0.000000] BIOS-e820: [mem 0x000000000009fc00-0x000000000009ffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000000f0000-0x00000000000fffff] reserved
+[    0.000000] BIOS-e820: [mem 0x0000000000100000-0x000000003ffeffff] usable
+[    0.000000] BIOS-e820: [mem 0x000000003fff0000-0x000000003fffffff] ACPI data
+[    0.000000] BIOS-e820: [mem 0x00000000fec00000-0x00000000fec00fff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fee00000-0x00000000fee00fff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fffc0000-0x00000000ffffffff] reserved
+[    0.000000] NX (Execute Disable) protection: active
+[    0.000000] SMBIOS 2.5 present.
+[    0.000000] DMI: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+[    0.000000] Hypervisor detected: KVM
+[    0.000000] e820: last_pfn = 0x3fff0 max_arch_pfn = 0x400000000
+[    0.000000] MTRR: Disabled
+[    0.000000] x86/PAT: MTRRs disabled, skipping PAT initialization too.
+[    0.000000] CPU MTRRs all blank - virtualized system.
+[    0.000000] x86/PAT: Configuration [0-7]: WB  WT  UC- UC  WB  WT  UC- UC  
+[    0.000000] found SMP MP-table at [mem 0x0009fff0-0x0009ffff]
+[    0.000000] Scanning 1 areas for low memory corruption
+[    0.000000] RAMDISK: [mem 0x359cb000-0x36cdcfff]
+[    0.000000] ACPI: Early table checksum verification disabled
+[    0.000000] ACPI: RSDP 0x00000000000E0000 000024 (v02 VBOX  )
+[    0.000000] ACPI: XSDT 0x000000003FFF0030 00003C (v01 VBOX   VBOXXSDT 00000001 ASL  00000061)
+[    0.000000] ACPI: FACP 0x000000003FFF00F0 0000F4 (v04 VBOX   VBOXFACP 00000001 ASL  00000061)
+[    0.000000] ACPI: DSDT 0x000000003FFF0610 002353 (v02 VBOX   VBOXBIOS 00000002 INTL 20100528)
+[    0.000000] ACPI: FACS 0x000000003FFF0200 000040
+[    0.000000] ACPI: FACS 0x000000003FFF0200 000040
+[    0.000000] ACPI: APIC 0x000000003FFF0240 000054 (v02 VBOX   VBOXAPIC 00000001 ASL  00000061)
+[    0.000000] ACPI: SSDT 0x000000003FFF02A0 00036C (v01 VBOX   VBOXCPUT 00000002 INTL 20100528)
+[    0.000000] ACPI: Reserving FACP table memory at [mem 0x3fff00f0-0x3fff01e3]
+[    0.000000] ACPI: Reserving DSDT table memory at [mem 0x3fff0610-0x3fff2962]
+[    0.000000] ACPI: Reserving FACS table memory at [mem 0x3fff0200-0x3fff023f]
+[    0.000000] ACPI: Reserving FACS table memory at [mem 0x3fff0200-0x3fff023f]
+[    0.000000] ACPI: Reserving APIC table memory at [mem 0x3fff0240-0x3fff0293]
+[    0.000000] ACPI: Reserving SSDT table memory at [mem 0x3fff02a0-0x3fff060b]
+[    0.000000] No NUMA configuration found
+[    0.000000] Faking a node at [mem 0x0000000000000000-0x000000003ffeffff]
+[    0.000000] NODE_DATA(0) allocated [mem 0x3ffc5000-0x3ffeffff]
+[    0.000000] kvm-clock: cpu 0, msr 0:3ff44001, primary cpu clock
+[    0.000000] kvm-clock: Using msrs 4b564d01 and 4b564d00
+[    0.000000] kvm-clock: using sched offset of 4048731234 cycles
+[    0.000000] clocksource: kvm-clock: mask: 0xffffffffffffffff max_cycles: 0x1cd42e4dffb, max_idle_ns: 881590591483 ns
+[    0.000000] Zone ranges:
+[    0.000000]   DMA      [mem 0x0000000000001000-0x0000000000ffffff]
+[    0.000000]   DMA32    [mem 0x0000000001000000-0x000000003ffeffff]
+[    0.000000]   Normal   empty
+[    0.000000]   Device   empty
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000000001000-0x000000000009efff]
+[    0.000000]   node   0: [mem 0x0000000000100000-0x000000003ffeffff]
+[    0.000000] Reserved but unavailable: 104 pages
+[    0.000000] Initmem setup node 0 [mem 0x0000000000001000-0x000000003ffeffff]
+[    0.000000] ACPI: PM-Timer IO Port: 0x4008
+[    0.000000] IOAPIC[0]: apic_id 1, version 32, address 0xfec00000, GSI 0-23
+[    0.000000] ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
+[    0.000000] ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 low level)
+[    0.000000] Using ACPI (MADT) for SMP configuration information
+[    0.000000] smpboot: Allowing 1 CPUs, 0 hotplug CPUs
+[    0.000000] PM: Registered nosave memory: [mem 0x00000000-0x00000fff]
+[    0.000000] PM: Registered nosave memory: [mem 0x0009f000-0x0009ffff]
+[    0.000000] PM: Registered nosave memory: [mem 0x000a0000-0x000effff]
+[    0.000000] PM: Registered nosave memory: [mem 0x000f0000-0x000fffff]
+[    0.000000] e820: [mem 0x40000000-0xfebfffff] available for PCI devices
+[    0.000000] Booting paravirtualized kernel on KVM
+[    0.000000] clocksource: refined-jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645519600211568 ns
+[    0.000000] setup_percpu: NR_CPUS:8192 nr_cpumask_bits:1 nr_cpu_ids:1 nr_node_ids:1
+[    0.000000] percpu: Embedded 50 pages/cpu s167936 r8192 d28672 u2097152
+[    0.000000] PV qspinlock hash table entries: 256 (order: 0, 4096 bytes)
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 257913
+[    0.000000] Policy zone: DMA32
+[    0.000000] Kernel command line: BOOT_IMAGE=/boot/vmlinuz-4.15.0-212-generic root=LABEL=cloudimg-rootfs ro console=tty1 console=ttyS0
+[    0.000000] Memory: 982844K/1048120K available (12300K kernel code, 2477K rwdata, 4324K rodata, 2480K init, 2720K bss, 65276K reserved, 0K cma-reserved)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.000000] ftrace: allocating 39508 entries in 155 pages
+[    0.004000] Hierarchical RCU implementation.
+[    0.004000] 	RCU restricting CPUs from NR_CPUS=8192 to nr_cpu_ids=1.
+[    0.004000] 	Tasks RCU enabled.
+[    0.004000] RCU: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=1
+[    0.004000] NR_IRQS: 524544, nr_irqs: 256, preallocated irqs: 16
+[    0.004000] random: crng init done
+[    0.004000] Console: colour VGA+ 80x25
+[    0.004000] console [tty1] enabled
+[    0.004000] console [ttyS0] enabled
+[    0.004000] ACPI: Core revision 20170831
+[    0.004000] ACPI: 2 ACPI AML tables successfully acquired and loaded
+[    0.004000] APIC: Switch to symmetric I/O mode setup
+[    0.008000] ..TIMER: vector=0x30 apic1=0 pin1=2 apic2=-1 pin2=-1
+[    0.008008] tsc: Detected 2894.454 MHz processor
+[    0.012009] Calibrating delay loop (skipped) preset value.. 5788.90 BogoMIPS (lpj=11577816)
+[    0.016008] pid_max: default: 32768 minimum: 301
+[    0.020063] Security Framework initialized
+[    0.024007] Yama: becoming mindful.
+[    0.027316] AppArmor: AppArmor initialized
+[    0.032000] Dentry cache hash table entries: 131072 (order: 8, 1048576 bytes)
+[    0.034540] Inode-cache hash table entries: 65536 (order: 7, 524288 bytes)
+[    0.036111] Mount-cache hash table entries: 2048 (order: 2, 16384 bytes)
+[    0.040095] Mountpoint-cache hash table entries: 2048 (order: 2, 16384 bytes)
+[    0.048337] CPU0: Hyper-Threading is disabled
+[    0.052126] Last level iTLB entries: 4KB 1024, 2MB 1024, 4MB 512
+[    0.056007] Last level dTLB entries: 4KB 2048, 2MB 2048, 4MB 1024, 1GB 0
+[    0.060009] Spectre V1 : Mitigation: usercopy/swapgs barriers and __user pointer sanitization
+[    0.064008] Spectre V2 : Mitigation: Retpolines
+[    0.068006] Spectre V2 : Spectre v2 / SpectreRSB mitigation: Filling RSB on context switch
+[    0.072007] Spectre V2 : Spectre v2 / SpectreRSB : Filling RSB on VMEXIT
+[    0.076007] RETBleed: Vulnerable
+[    0.084769] Freeing SMP alternatives memory: 36K
+[    0.200410] smpboot: CPU0: AMD Ryzen 7 4800H with Radeon Graphics (family: 0x17, model: 0x60, stepping: 0x1)
+[    0.204457] Performance Events: PMU not available due to virtualization, using software events only.
+[    0.208167] Hierarchical SRCU implementation.
+[    0.212778] NMI watchdog: Perf event create on CPU 0 failed with -2
+[    0.216010] NMI watchdog: Perf NMI watchdog permanently disabled
+[    0.220327] smp: Bringing up secondary CPUs ...
+[    0.224009] smp: Brought up 1 node, 1 CPU
+[    0.228012] smpboot: Max logical packages: 1
+[    0.232010] smpboot: Total of 1 processors activated (5788.90 BogoMIPS)
+[    0.236495] devtmpfs: initialized
+[    0.240132] x86/mm: Memory block size: 128MB
+[    0.244442] evm: security.selinux
+[    0.248013] evm: security.SMACK64
+[    0.250779] evm: security.SMACK64EXEC
+[    0.252008] evm: security.SMACK64TRANSMUTE
+[    0.256011] evm: security.SMACK64MMAP
+[    0.260007] evm: security.apparmor
+[    0.262924] evm: security.ima
+[    0.264007] evm: security.capability
+[    0.268454] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+[    0.272023] futex hash table entries: 256 (order: 2, 16384 bytes)
+[    0.276231] pinctrl core: initialized pinctrl subsystem
+[    0.280502] RTC time:  6:20:44, date: 07/01/25
+[    0.284511] NET: Registered protocol family 16
+[    0.288150] audit: initializing netlink subsys (disabled)
+[    0.292888] cpuidle: using governor ladder
+[    0.296020] audit: type=2000 audit(1751350848.698:1): state=initialized audit_enabled=0 res=1
+[    0.300015] cpuidle: using governor menu
+[    0.308607] ACPI: bus type PCI registered
+[    0.312009] acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+[    0.316534] PCI: Using configuration type 1 for base access
+[    0.320008] PCI: Using configuration type 1 for extended access
+[    0.326456] HugeTLB registered 2.00 MiB page size, pre-allocated 0 pages
+[    0.329116] ACPI: Added _OSI(Module Device)
+[    0.336013] ACPI: Added _OSI(Processor Device)
+[    0.340010] ACPI: Added _OSI(3.0 _SCP Extensions)
+[    0.344010] ACPI: Added _OSI(Processor Aggregator Device)
+[    0.348034] ACPI: Added _OSI(Linux-Dell-Video)
+[    0.352009] ACPI: Added _OSI(Linux-Lenovo-NV-HDMI-Audio)
+[    0.356010] ACPI: Added _OSI(Linux-HPI-Hybrid-Graphics)
+[    0.360884] ACPI: Executed 1 blocks of module-level executable AML code
+[    0.370038] ACPI: Interpreter enabled
+[    0.372026] ACPI: (supports S0 S5)
+[    0.376009] ACPI: Using IOAPIC for interrupt routing
+[    0.380549] PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+[    0.384292] ACPI: Enabled 2 GPEs in block 00 to 07
+[    0.401130] ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
+[    0.404019] acpi PNP0A03:00: _OSC: OS supports [ExtendedConfig ASPM ClockPM Segments MSI]
+[    0.412667] acpi PNP0A03:00: _OSC: platform does not support [PCIeCapability]
+[    0.420736] acpi PNP0A03:00: _OSC: not requesting control; platform does not support [PCIeCapability]
+[    0.424010] acpi PNP0A03:00: _OSC: OS requested [PCIeHotplug PME AER PCIeCapability]
+[    0.428010] acpi PNP0A03:00: _OSC: platform willing to grant [PCIeHotplug PME AER]
+[    0.432011] acpi PNP0A03:00: _OSC failed (AE_SUPPORT); disabling ASPM
+[    0.440938] PCI host bridge to bus 0000:00
+[    0.444011] pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7 window]
+[    0.448010] pci_bus 0000:00: root bus resource [io  0x0d00-0xffff window]
+[    0.452013] pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff window]
+[    0.456011] pci_bus 0000:00: root bus resource [mem 0x40000000-0xfdffffff window]
+[    0.460012] pci_bus 0000:00: root bus resource [bus 00-ff]
+[    0.476325] pci 0000:00:01.1: legacy IDE quirk: reg 0x10: [io  0x01f0-0x01f7]
+[    0.480009] pci 0000:00:01.1: legacy IDE quirk: reg 0x14: [io  0x03f6]
+[    0.484012] pci 0000:00:01.1: legacy IDE quirk: reg 0x18: [io  0x0170-0x0177]
+[    0.488010] pci 0000:00:01.1: legacy IDE quirk: reg 0x1c: [io  0x0376]
+[    0.514406] pci 0000:00:07.0: quirk: [io  0x4000-0x403f] claimed by PIIX4 ACPI
+[    0.516062] pci 0000:00:07.0: quirk: [io  0x4100-0x410f] claimed by PIIX4 SMB
+[    0.537924] ACPI: PCI Interrupt Link [LNKA] (IRQs 5 9 10 *11)
+[    0.540747] ACPI: PCI Interrupt Link [LNKB] (IRQs 5 9 *10 11)
+[    0.544295] ACPI: PCI Interrupt Link [LNKC] (IRQs 5 *9 10 11)
+[    0.548275] ACPI: PCI Interrupt Link [LNKD] (IRQs 5 9 10 *11)
+[    0.552865] SCSI subsystem initialized
+[    0.556333] pci 0000:00:02.0: vgaarb: setting as boot VGA device
+[    0.560000] pci 0000:00:02.0: vgaarb: VGA device added: decodes=io+mem,owns=io+mem,locks=none
+[    0.560012] pci 0000:00:02.0: vgaarb: bridge control possible
+[    0.564008] vgaarb: loaded
+[    0.566335] ACPI: bus type USB registered
+[    0.568038] usbcore: registered new interface driver usbfs
+[    0.572029] usbcore: registered new interface driver hub
+[    0.576054] usbcore: registered new device driver usb
+[    0.580204] EDAC MC: Ver: 3.0.0
+[    0.585013] PCI: Using ACPI for IRQ routing
+[    0.588891] NetLabel: Initializing
+[    0.592007] NetLabel:  domain hash size = 128
+[    0.595470] NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+[    0.596167] NetLabel:  unlabeled traffic allowed by default
+[    0.600272] clocksource: Switched to clocksource kvm-clock
+[    0.644107] VFS: Disk quotas dquot_6.6.0
+[    0.652201] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    0.658402] AppArmor: AppArmor Filesystem Enabled
+[    0.664217] pnp: PnP ACPI init
+[    0.669254] pnp: PnP ACPI: found 3 devices
+[    0.680836] clocksource: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns
+[    0.689979] NET: Registered protocol family 2
+[    0.694939] IP idents hash table entries: 16384 (order: 5, 131072 bytes)
+[    0.701853] TCP established hash table entries: 8192 (order: 4, 65536 bytes)
+[    0.708833] TCP bind hash table entries: 8192 (order: 5, 131072 bytes)
+[    0.716128] TCP: Hash tables configured (established 8192 bind 8192)
+[    0.722981] UDP hash table entries: 512 (order: 2, 16384 bytes)
+[    0.729227] UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+[    0.735855] NET: Registered protocol family 1
+[    0.740733] pci 0000:00:00.0: Limiting direct PCI/PCI transfers
+[    0.746756] pci 0000:00:01.0: Activating ISA DMA hang workarounds
+[    0.753088] pci 0000:00:02.0: Video device with shadowed ROM at [mem 0x000c0000-0x000dffff]
+[    0.761656] Unpacking initramfs...
+[    1.348160] Freeing initrd memory: 19528K
+[    1.352475] clocksource: tsc: mask: 0xffffffffffffffff max_cycles: 0x29b8cbf258d, max_idle_ns: 440795282184 ns
+[    1.363035] platform rtc_cmos: registered platform RTC device (no PNP device found)
+[    1.371013] Scanning for low memory corruption every 60 seconds
+[    1.377871] Initialise system trusted keyrings
+[    1.382776] Key type blacklist registered
+[    1.387388] workingset: timestamp_bits=36 max_order=18 bucket_order=0
+[    1.395834] zbud: loaded
+[    1.399861] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    1.405934] fuse init (API version 7.26)
+[    1.411159] Key type asymmetric registered
+[    1.414929] Asymmetric key parser 'x509' registered
+[    1.419623] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 246)
+[    1.426270] io scheduler noop registered
+[    1.430719] io scheduler deadline registered
+[    1.435086] io scheduler cfq registered (default)
+[    1.439880] ACPI: AC Adapter [AC] (on-line)
+[    1.444366] input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input0
+[    1.451654] ACPI: Power Button [PWRF]
+[    1.456084] input: Sleep Button as /devices/LNXSYSTM:00/LNXSLPBN:00/input/input1
+[    1.463133] ACPI: Sleep Button [SLPF]
+[    1.469066] ACPI: Battery Slot [BAT0] (battery present)
+[    1.474280] Serial: 8250/16550 driver, 32 ports, IRQ sharing enabled
+[    1.513347] 00:02: ttyS0 at I/O 0x3f8 (irq = 4, base_baud = 115200) is a 16550A
+[    1.521588] Linux agpgart interface v0.103
+[    1.527544] loop: module loaded
+[    1.532417] scsi host0: ata_piix
+[    1.535918] scsi host1: ata_piix
+[    1.539575] ata1: PATA max UDMA/33 cmd 0x1f0 ctl 0x3f6 bmdma 0xd000 irq 14
+[    1.546587] ata2: PATA max UDMA/33 cmd 0x170 ctl 0x376 bmdma 0xd008 irq 15
+[    1.553590] tun: Universal TUN/TAP device driver, 1.6
+[    1.558948] PPP generic driver version 2.4.2
+[    1.563649] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    1.570460] ehci-pci: EHCI PCI platform driver
+[    1.575808] ehci-platform: EHCI generic platform driver
+[    1.581423] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    1.588033] ohci-pci: OHCI PCI platform driver
+[    1.593157] ohci-platform: OHCI generic platform driver
+[    1.598982] uhci_hcd: USB Universal Host Controller Interface driver
+[    1.605130] i8042: PNP: PS/2 Controller [PNP0303:PS2K,PNP0f03:PS2M] at 0x60,0x64 irq 1,12
+[    1.615447] serio: i8042 KBD port at 0x60,0x64 irq 1
+[    1.619753] serio: i8042 AUX port at 0x60,0x64 irq 12
+[    1.624083] mousedev: PS/2 mouse device common for all mice
+[    1.631562] input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input2
+[    1.641234] rtc_cmos rtc_cmos: rtc core: registered rtc_cmos as rtc0
+[    1.646849] rtc_cmos rtc_cmos: alarms up to one day, 114 bytes nvram
+[    1.652631] i2c /dev entries driver
+[    1.655755] device-mapper: uevent: version 1.0.3
+[    1.659782] device-mapper: ioctl: 4.37.0-ioctl (2017-09-20) initialised: dm-devel@redhat.com
+[    1.666738] ledtrig-cpu: registered to indicate activity on CPUs
+[    1.673155] NET: Registered protocol family 10
+[    1.680781] Segment Routing with IPv6
+[    1.683777] NET: Registered protocol family 17
+[    1.687670] Key type dns_resolver registered
+[    1.691563] mce: Using 0 MCE banks
+[    1.694555] RAS: Correctable Errors collector initialized.
+[    1.699208] sched_clock: Marking stable (1699127134, 0)->(2515248148, -816121014)
+[    1.705700] registered taskstats version 1
+[    1.709218] Loading compiled-in X.509 certificates
+[    1.775091] Loaded X.509 cert 'Build time autogenerated kernel key: b5b26778eaa3ab3a4a6cee031137706e947d12ad'
+[    1.785709] Loaded X.509 cert 'Canonical Ltd. Live Patch Signing: 14df34d1a87cf37625abec039ef2bf521249b969'
+[    1.795175] Loaded X.509 cert 'Canonical Ltd. Kernel Module Signing: 88f752e560a1e0737e31163a466ad7b70a850c19'
+[    1.805332] blacklist: Loading compiled-in revocation X.509 certificates
+[    1.811540] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing: 61482aa2830d0ab2ad5af10b7250da9033ddcef0'
+[    1.820674] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2017): 242ade75ac4a15e50d50c84b0d45ff3eae707a03'
+[    1.829649] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (ESM 2018): 365188c1d374d6b07c3c8f240f8ef722433d6a8b'
+[    1.839554] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2019): c0746fd6c5da3ae827864651ad66ae47fe24b3e8'
+[    1.851869] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2021 v1): a8d54bbb3825cfb94fa13c9f8a594a195c107b8d'
+[    1.861259] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2021 v2): 4cf046892d6fd3c9a5b03f98d845f90851dc6a8c'
+[    1.870408] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2021 v3): 100437bb6de6e469b581e61cd66bce3ef4ed53af'
+[    1.880755] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (Ubuntu Core 2019): c1d57b8f6b743f23ee41f4f7ee292f06eecadfb9'
+[    1.893462] zswap: loaded using pool lzo/zbud
+[    1.902837] Key type big_key registered
+[    1.906366] Key type trusted registered
+[    1.911627] Key type encrypted registered
+[    1.915453] AppArmor: AppArmor sha1 policy hashing enabled
+[    1.921397] ima: No TPM chip found, activating TPM-bypass! (rc=-19)
+[    1.927121] ima: Allocated hash algorithm: sha1
+[    1.932008] evm: HMAC attrs: 0x1
+[    1.936687]   Magic number: 1:984:315
+[    1.941043] tty tty40: hash matches
+[    1.945305] rtc_cmos rtc_cmos: setting system clock to 2025-07-01 06:20:45 UTC (1751350845)
+[    1.954125] BIOS EDD facility v0.16 2004-Jun-25, 0 devices found
+[    1.959737] EDD information not available.
+[    1.966996] Freeing unused kernel image memory: 2480K
+[    1.976741] Write protecting the kernel read-only data: 20480k
+[    1.982241] Freeing unused kernel image memory: 2008K
+[    1.987312] Freeing unused kernel image memory: 1820K
+[    2.001491] x86/mm: Checked W+X mappings: passed, no W+X pages found.
+Loading, please wait...
+starting version 237
+[    2.123385] e1000: Intel(R) PRO/1000 Network Driver - version 7.3.21-k8-NAPI
+[    2.130199] e1000: Copyright (c) 1999-2006 Intel Corporation.
+[    2.142459] Fusion MPT base driver 3.04.20
+[    2.146434] Copyright (c) 1999-2008 LSI Corporation
+[    2.175608] SSE version of gcm_enc/dec engaged.
+[    2.225320] Fusion MPT SPI Host driver 3.04.20
+[    2.409645] input: ImExPS/2 Generic Explorer Mouse as /devices/platform/i8042/serio1/input/input4
+[    2.910973] e1000 0000:00:03.0 eth0: (PCI:33MHz:32-bit) 02:3b:7b:b7:3b:2d
+[    2.916509] e1000 0000:00:03.0 eth0: Intel(R) PRO/1000 Network Connection
+[    2.923751] mptbase: ioc0: Initiating bringup
+[    3.034570] ioc0: LSI53C1030 A0: Capabilities={Initiator}
+[    3.293462] scsi host2: ioc0: LSI53C1030 A0, FwRev=00000000h, Ports=1, MaxQ=256, IRQ=20
+[    3.469724] scsi 2:0:0:0: Direct-Access     VBOX     HARDDISK         1.0  PQ: 0 ANSI: 5
+[    3.480092] scsi target2:0:0: Beginning Domain Validation
+[    3.491755] scsi target2:0:0: Domain Validation skipping write tests
+[    3.498023] scsi target2:0:0: Ending Domain Validation
+[    3.504066] scsi target2:0:0: asynchronous
+[    3.510650] scsi 2:0:1:0: Direct-Access     VBOX     HARDDISK         1.0  PQ: 0 ANSI: 5
+[    3.527466] scsi target2:0:1: Beginning Domain Validation
+[    3.601457] scsi target2:0:1: Domain Validation skipping write tests
+[    3.607280] scsi target2:0:1: Ending Domain Validation
+[    3.629078] scsi target2:0:1: asynchronous
+[    3.752625] sd 2:0:0:0: [sda] 83886080 512-byte logical blocks: (42.9 GB/40.0 GiB)
+[    3.760209] sd 2:0:0:0: Attached scsi generic sg0 type 0
+[    3.772622] sd 2:0:0:0: [sda] Write Protect is off
+[    3.777782] sd 2:0:1:0: [sdb] 20480 512-byte logical blocks: (10.5 MB/10.0 MiB)
+[    3.783846] sd 2:0:1:0: Attached scsi generic sg1 type 0
+[    3.788586] sd 2:0:1:0: [sdb] Write Protect is off
+[    3.792814] sd 2:0:0:0: [sda] Incomplete mode parameter data
+[    3.797245] sd 2:0:0:0: [sda] Assuming drive cache: write through
+[    3.810632] sd 2:0:1:0: [sdb] Incomplete mode parameter data
+[    3.815393] sd 2:0:1:0: [sdb] Assuming drive cache: write through
+[    3.831910]  sda: sda1
+[    3.844716] sd 2:0:0:0: [sda] Attached SCSI disk
+[    3.876582] sd 2:0:1:0: [sdb] Attached SCSI disk
+[    4.279265] e1000 0000:00:08.0 eth1: (PCI:33MHz:32-bit) 08:00:27:56:4e:49
+[    4.285700] e1000 0000:00:08.0 eth1: Intel(R) PRO/1000 Network Connection
+[    4.293950] e1000 0000:00:08.0 enp0s8: renamed from eth1
+[    4.303752] e1000 0000:00:03.0 enp0s3: renamed from eth0
+Begin: Loading essential drivers ... [    6.176073] raid6: sse2x1   gen()  7111 MB/s
+[    6.240160] raid6: sse2x1   xor()  8275 MB/s
+[    6.293294] raid6: sse2x2   gen() 13330 MB/s
+[    6.348116] raid6: sse2x2   xor()  9790 MB/s
+[    6.400260] raid6: sse2x4   gen() 15252 MB/s
+[    6.452734] raid6: sse2x4   xor()  7316 MB/s
+[    6.456344] raid6: using algorithm sse2x4 gen() 15252 MB/s
+[    6.461079] raid6: .... xor() 7316 MB/s, rmw enabled
+[    6.465523] raid6: using ssse3x2 recovery algorithm
+[    6.470820] xor: measuring software checksum speed
+[    6.583044]    prefetch64-sse: 45061.000 MB/sec
+[    6.688065]    generic_sse: 41467.000 MB/sec
+[    6.692109] xor: using function: prefetch64-sse (45061.000 MB/sec)
+[    6.698738] async_tx: api initialized (async)
+done.
+Begin: Running /scripts/init-premount ... done.
+Begin: Mounting root file system ... Begin: Running /scripts/local-top ... done.
+Begin: Running /scripts/local-premount ... [    6.766092] Btrfs loaded, crc32c=crc32c-intel
+Scanning for Btrfs filesystems
+done.
+Warning: fsck not present, so skipping root file system
+[    6.821316] EXT4-fs (sda1): INFO: recovery required on readonly filesystem
+[    6.827524] EXT4-fs (sda1): write access will be enabled during recovery
+[    7.119463] EXT4-fs (sda1): recovery complete
+[    7.124836] EXT4-fs (sda1): mounted filesystem with ordered data mode. Opts: (null)
+done.
+Begin: Running /scripts/local-bottom ... done.
+Begin: Running /scripts/init-bottom ... done.
+[    7.393238] ip_tables: (C) 2000-2006 Netfilter Core Team
+[    7.415529] systemd[1]: systemd 237 running in system mode. (+PAM +AUDIT +SELINUX +IMA +APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 +SECCOMP +BLKID +ELFUTILS +KMOD -IDN2 +IDN -PCRE2 default-hierarchy=hybrid)
+[    7.432454] systemd[1]: Detected virtualization oracle.
+[    7.437044] systemd[1]: Detected architecture x86-64.
+
+Welcome to [1mUbuntu 18.04.6 LTS[0m!
+
+[    7.447456] systemd[1]: Set hostname to <worker02>.
+[    7.866208] systemd[1]: Reached target User and Group Name Lookups.
+[[0;32m  OK  [0m] Reached target User and Group Name Lookups.
+[    7.875795] systemd[1]: Started Forward Password Requests to Wall Directory Watch.
+[[0;32m  OK  [0m] Started Forward Password Requests to Wall Directory Watch.
+[    7.886541] systemd[1]: Reached target System Time Synchronized.
+[[0;32m  OK  [0m] Reached target System Time Synchronized.
+[    7.895832] systemd[1]: Reached target Mounting snaps.
+[[0;32m  OK  [0m] Reached target Mounting snaps.
+[    7.905306] systemd[1]: Reached target Mounted snaps.
+[[0;32m  OK  [0m] Reached target Mounted snaps.
+[    7.914649] systemd[1]: Created slice System Slice.
+[[0;32m  OK  [0m] Created slice System Slice.
+[[0;32m  OK  [0m] Listening on udev Kernel Socket.
+[[0;32m  OK  [0m] Listening on LVM2 metadata daemon socket.
+[[0;32m  OK  [0m] Listening on Journal Audit Socket.
+[[0;32m  OK  [0m] Listening on Device-mapper event daemon FIFOs.
+[[0;32m  OK  [0m] Listening on Journal Socket (/dev/log).
+[[0;32m  OK  [0m] Listening on LVM2 poll daemon socket.
+[[0;32m  OK  [0m] Created slice system-serial\x2dgetty.slice.
+[[0;32m  OK  [0m] Listening on /dev/initctl Compatibility Named Pipe.
+[[0;32m  OK  [0m] Listening on udev Control Socket.
+[[0;32m  OK  [0m] Listening on Network Service Netlink Socket.
+[[0;32m  OK  [0m] Listening on Journal Socket.
+         Starting udev Coldplug all Devices...
+         Starting Monitoring of LVM2 mirrors…ng dmeventd or progress polling...
+         Mounting Huge Pages File System...
+         Starting Set the console keyboard layout...
+         Starting Create list of required st…ce nodes for the current kernel...
+         Starting Uncomplicated firewall...
+         Mounting Kernel Debug File System...
+         Mounting POSIX Message Queue File System...
+[[0;32m  OK  [0m] Created slice User and Session Slice.
+[[0;32m  OK  [0m] Reached target Slices.
+         Starting Load Kernel Modules...
+[[0;32m  OK  [0m] Set up automount Arbitrary Executab…rmats File System Automount Point.
+[[0;32m  OK  [0m] Reached target Swap.
+[[0;32m  OK  [0m] Listening on fsck to fsckd communication Socket.
+[    8.160863] Loading iSCSI transport class v2.0-870.
+         Starting File System Check on Root Device...
+[[0;32m  OK  [0m] Listening on Syslog Socket.
+         Starting Journal Service...
+[[0;32m  OK  [0m] Mounted Huge Pages File System.
+[[0;32m  OK  [0m] Started Create list of required sta…vice nodes for the current kernel.
+[[0;32m  OK  [0m] Started Uncomplicated firewall.
+[[0;32m  OK  [0m] Mounted Kernel Debug File System.
+[[0;32m  OK  [0m] Mounted POSIX Message Queue File System.[    8.255934] iscsi: registered transport (tcp)
+
+[[0;32m  OK  [0m] Started LVM2 metadata daemon.
+[[0;32m  OK  [0m] Started File System Check Daemon to report status.
+         Starting Create Static Device Nodes in /dev...
+[[0;32m  OK  [0m] Started Monitoring of LVM2 mirrors,…sing dmeventd or progress polling.
+[[0;32m  OK  [0m] Started File System Check on Root Device.
+         Starting Remount Root and Kernel File Systems...
+[[0;32m  OK  [0m] Started Create Static Device Nodes in /dev.
+[[0;32m  OK  [0m] Started Journal Service.
+[[0;32m  OK  [0m] Started udev Coldplug all Devices.
+[    8.458787] EXT4-fs (sda1): re-mounted. Opts: (null)
+[[0;32m  OK  [0m] Started Remount Root and Kernel File Systems.
+         Starting Flush Journal to Persistent Storage...
+         Starting Load/Save Random Seed...[    8.500057] iscsi: registered transport (iser)
+
+         Starting udev Kernel Device Manager...
+[[0;32m  OK  [0m] Started Set the console keyboard layout.
+[[0;32m  OK  [0m] Started Load Kernel Modules.
+[[0;32m  OK  [0m] Started Load/Save Random Seed.
+[    8.565940] systemd-journald[416]: Received request to flush runtime journal from PID 1
+         Mounting FUSE Control File System...
+         Mounting Kernel Configuration File System...
+         Starting Apply Kernel Variables...
+[[0;32m  OK  [0m] Reached target Local File Systems (Pre).
+[[0;32m  OK  [0m] Reached target Local File Systems.
+         Starting AppArmor initialization...
+         Starting Set console font and keymap...
+         Starting Tell Plymouth To Write Out Runtime Data...
+         Starting ebtables ruleset management...
+[[0;32m  OK  [0m] Mounted FUSE Control File System.
+[[0;32m  OK  [0m] Mounted Kernel Configuration File System.
+[[0;32m  OK  [0m] Started udev Kernel Device Manager.
+[[0;32m  OK  [0m] Started Dispatch Password Requests to Console Directory Watch.
+[[0;32m  OK  [0m] Reached target Local Encrypted Volumes.
+[[0;32m  OK  [0m] Started Apply Kernel Variables.
+[[0;32m  OK  [0m] Started Set console font and keymap.
+[[0;32m  OK  [0m] Started Tell Plymouth To Write Out Runtime Data.
+[[0;32m  OK  [0m] Started ebtables ruleset management.
+[[0;32m  OK  [0m] Started Flush Journal to Persistent Storage.
+         Starting Create Volatile Files and Directories...
+[[0;32m  OK  [0m] Started Create Volatile Files and Directories.
+         Starting Update UTMP about System Boot/Shutdown...
+[[0;32m  OK  [0m] Started Update UTMP about System Boot/Shutdown.
+[[0;32m  OK  [0m] Started AppArmor initialization.
+         Starting Load AppArmor profiles managed internally by snapd...
+         Starting Initial cloud-init job (pre-networking)...
+         Mounting Arbitrary Executable File Formats File System...
+[[0;32m  OK  [0m] Found device /dev/ttyS0.
+[[0;32m  OK  [0m] Mounted Arbitrary Executable File Formats File System.
+[[0;32m  OK  [0m] Started Load AppArmor profiles managed internally by snapd.
+[[0;32m  OK  [0m] Listening on Load/Save RF Kill Switch Status /dev/rfkill Watch.
+[   11.624447] cloud-init[521]: Cloud-init v. 23.1.2-0ubuntu0~18.04.1 running 'init-local' at Tue, 01 Jul 2025 06:20:54 +0000. Up 11.44 seconds.
+[[0;32m  OK  [0m] Started Initial cloud-init job (pre-networking).
+[[0;32m  OK  [0m] Reached target Network (Pre).
+         Starting Network Service...
+[[0;32m  OK  [0m] Started Network Service.
+         Starting Network Name Resolution...
+         Starting Wait for Network to be Configured...
+[[0;32m  OK  [0m] Started Network Name Resolution.
+[[0;32m  OK  [0m] Reached target Network.
+[[0;32m  OK  [0m] Reached target Host and Network Name Lookups.
+[[0;32m  OK  [0m] Started Wait for Network to be Configured.
+         Starting Initial cloud-init job (metadata service crawler)...
+[   14.322332] cloud-init[649]: Cloud-init v. 23.1.2-0ubuntu0~18.04.1 running 'init' at Tue, 01 Jul 2025 06:20:57 +0000. Up 14.15 seconds.
+[   14.338677] cloud-init[649]: ci-info: ++++++++++++++++++++++++++++++++++++++Net device info+++++++++++++++++++++++++++++++++++++++
+[   14.353278] cloud-init[649]: ci-info: +--------+------+-----------------------------+---------------+--------+-------------------+
+[   14.366979] cloud-init[649]: ci-info: | Device |  Up  |           Address           |      Mask     | Scope  |     Hw-Address    |
+[   14.385624] cloud-init[649]: ci-info: +--------+------+-----------------------------+---------------+--------+-------------------+
+[   14.398262] cloud-init[649]: ci-info: | enp0s3 | True |          10.0.2.15          | 255.255.255.0 | global | 02:3b:7b:b7:3b:2d |
+[   14.418931] cloud-init[649]: ci-info: | enp0s3 | True |  fe80::3b:7bff:feb7:3b2d/64 |       .       |  link  | 02:3b:7b:b7:3b:2d |
+[   14.438988] cloud-init[649]: ci-info: | enp0s8 | True |        192.168.56.103       | 255.255.255.0 | global | 08:00:27:56:4e:49 |
+[   14.449976] cloud-init[649]: ci-info: | enp0s8 | True | fe80::a00:27ff:fe56:4e49/64 |       .       |  link  | 08:00:27:56:4e:49 |
+[   14.462456] cloud-init[649]: ci-info: |   lo   | True |          127.0.0.1          |   255.0.0.0   |  host  |         .         |
+[   14.474981] cloud-init[649]: ci-info: |   lo   | True |           ::1/128           |       .       |  host  |         .         |
+[   14.487787] cloud-init[649]: ci-info: +--------+------+-----------------------------+---------------+--------+-------------------+
+[   14.504432] cloud-init[649]: ci-info: +++++++++++++++++++++++++++++Route IPv4 info+++++++++++++++++++++++++++++
+[   14.517872] cloud-init[649]: ci-info: +-------+--------------+----------+-----------------+-----------+-------+
+[   14.532484] cloud-init[649]: ci-info: | Route | Destination  | Gateway  |     Genmask     | Interface | Flags |
+[   14.544217] cloud-init[649]: ci-info: +-------+--------------+----------+-----------------+-----------+-------+
+[   14.553510] cloud-init[649]: ci-info: |   0   |   0.0.0.0    | 10.0.2.2 |     0.0.0.0     |   enp0s3  |   UG  |
+[   14.563920] cloud-init[649]: ci-info: |   1   |   10.0.2.0   | 0.0.0.0  |  255.255.255.0  |   enp0s3  |   U   |
+[   14.575693] cloud-init[649]: ci-info: |   2   |   10.0.2.2   | 0.0.0.0  | 255.255.255.255 |   enp0s3  |   UH  |
+[   14.588743] cloud-init[649]: ci-info: |   3   | 192.168.56.0 | 0.0.0.0  |  255.255.255.0  |   enp0s8  |   U   |
+[   14.602404] cloud-init[649]: ci-info: +-------+--------------+----------+-----------------+-----------+-------+
+[   14.624178] cloud-init[649]: ci-info: +++++++++++++++++++Route IPv6 info+++++++++++++++++++
+[   14.645011] cloud-init[649]: ci-info: +-------+-------------+---------+-----------+-------+
+[   14.649902] cloud-init[649]: ci-info: | Route | Destination | Gateway | Interface | Flags |
+[   14.664334] cloud-init[649]: ci-info: +-------+-------------+---------+-----------+-------+
+[   14.669199] cloud-init[649]: ci-info: |   1   |  fe80::/64  |    ::   |   enp0s8  |   U   |
+[   14.686384] cloud-init[649]: ci-info: |   2   |  fe80::/64  |    ::   |   enp0s3  |   U   |
+[   14.692343] cloud-init[649]: ci-info: |   4   |    local    |    ::   |   enp0s3  |   U   |
+[   14.706838] cloud-init[649]: ci-info: |   5   |    local    |    ::   |   enp0s8  |   U   |
+[   14.712794] cloud-init[649]: ci-info: |   6   |   ff00::/8  |    ::   |   enp0s8  |   U   |
+[   14.729472] cloud-init[649]: ci-info: |   7   |   ff00::/8  |    ::   |   enp0s3  |   U   |
+[   14.736006] cloud-init[649]: ci-info: +-------+-------------+---------+-----------+-------+[[0;32m  OK  [0m] Started Initial cloud-init job (metadata service crawler).
+
+[[0;32m  OK  [0m] Reached target Network is Online.
+         Starting Availability of block devices...
+[[0;32m  OK  [0m] Reached target Remote File Systems (Pre).
+         Mounting /vagrant_data...
+         Mounting /vagrant...
+[[0;32m  OK  [0m] Reached target System Initialization.[   14.819645] BUG: unable to handle kernel NULL pointer dereference at 0000000000000008
+[   14.826889] IP: VbglR0IdcCallRaw+0x6/0x20 [vboxsf]
+[   14.831380] PGD 0 P4D 0 
+[   14.833948] Oops: 0000 [#1] SMP NOPTI
+[   14.837535] Modules linked in: vboxsf(+) isofs crct10dif_pclmul crc32_pclmul ghash_clmulni_intel binfmt_misc input_leds serio_raw video vboxguest sch_fq_codel ib_iser rdma_cm iw_cm ib_cm ib_core iscsi_tcp libiscsi_tcp libiscsi scsi_transport_iscsi ip_tables x_tables autofs4 btrfs zstd_compress raid10 raid456 async_raid6_recov async_memcpy async_pq async_xor async_tx xor raid6_pq libcrc32c raid1 raid0 multipath linear mptspi scsi_transport_spi mptscsih aesni_intel aes_x86_64 crypto_simd cryptd glue_helper psmouse mptbase e1000
+[   14.874309] CPU: 0 PID: 733 Comm: mount.vboxsf Not tainted 4.15.0-212-generic #223-Ubuntu
+[   14.881690] Hardware name: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+[   14.888673] RIP: 0010:VbglR0IdcCallRaw+0x6/0x20 [vboxsf]
+[   14.894021] RSP: 0018:ffffaf45c06c3c40 EFLAGS: 00010282
+[   14.900029] RAX: 0000000000000068 RBX: 0000000000000068 RCX: 0000000000000068
+[   14.907498] RDX: ffffaf45c06c3c78 RSI: 00000000c0685607 RDI: 0000000000000008
+[   14.915229] RBP: ffffaf45c06c3c68 R08: ffff94103fc2b060 R09: ffff94103e001a80
+[   14.923141] R10: 00000000001fffff R11: 0000000000000201 R12: 0000000000000000
+[   14.930232] R13: ffffaf45c06c3c78 R14: ffff94103be02000 R15: ffff94103674a300
+[   14.936252] FS:  00007f518db91740(0000) GS:ffff94103fc00000(0000) knlGS:0000000000000000
+[   14.943168] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[   14.947965] CR2: 0000000000000008 CR3: 000000003beb8000 CR4: 00000000000006f0
+[   14.954437] Call Trace:
+[   14.956686]  ? VbglR0HGCMCallRaw+0x44/0xa0 [vboxsf]
+[   14.960964]  VbglR0SfMapFolder+0xbf/0xf0 [vboxsf]
+[   14.965807]  ? __kmalloc+0x190/0x210
+[   14.969421]  sf_read_super_26+0x110/0x500 [vboxsf]
+[   14.973956]  ? sget_userns+0x419/0x490
+[   14.977182]  ? get_anon_bdev+0x100/0x100
+[   14.981032]  ? sget+0x7d/0xa0
+[   14.983706]  ? sf_evict_inode+0x60/0x60 [vboxsf]
+[   14.988245]  mount_nodev+0x4f/0xa0
+[   14.991212]  sf_mount+0x18/0x20 [vboxsf]
+[   14.995048]  mount_fs+0x37/0x160
+[   14.998579]  vfs_kern_mount.part.24+0x5d/0x110
+[   15.002995]  do_mount+0x5fa/0xd20
+[   15.006086]  ? kmem_cache_alloc_trace+0x15d/0x1d0
+[   15.010582]  ? copy_mount_options+0x2c/0x220
+[   15.015137]  SyS_mount+0x98/0xe0
+[   15.018736]  do_syscall_64+0x73/0x130
+[   15.022529]  entry_SYSCALL_64_after_hwframe+0x59/0xbe
+[   15.027731] RIP: 0033:0x7f518d48515a
+[   15.031158] RSP: 002b:00007ffdb787d878 EFLAGS: 00000246 ORIG_RAX: 00000000000000a5
+[   15.037239] RAX: ffffffffffffffda RBX: 0000000000000001 RCX: 00007f518d48515a
+[   15.044397] RDX: 000055bc5fb2ea43 RSI: 00007ffdb787ef69 RDI: 00007ffdb787ef60
+[   15.051589] RBP: 00007ffdb787eab0 R08: 00007ffdb787d930 R09: 0000000000000000
+[   15.058387] R10: 0000000000000004 R11: 0000000000000246 R12: 00007ffdb787d930
+[   15.064892] R13: 00007ffdb787ef60 R14: 0000000000000004 R15: 00007ffdb787d8d0
+[   15.071393] Code: f1 ff 5d c3 90 0f 1f 44 00 00 55 48 8b 3f 48 89 f2 b9 20 00 00 00 be 3e 56 20 c0 48 89 e5 e8 42 61 f1 ff 5d c3 0f 1f 44 00 00 55 <48> 8b 3f 89 c9 48 89 e5 e8 2d 61 f1 ff 5d c3 66 2e 0f 1f 84 00 
+[   15.086419] RIP: VbglR0IdcCallRaw+0x6/0x20 [vboxsf] RSP: ffffaf45c06c3c40
+[   15.091780] CR2: 0000000000000008
+[   15.094890] ---[ end trace fbc08f26c78a6827 ]---
+
+[   15.100011] vboxsf: Successfully loaded version 5.2.8_KernelUbuntu (interface 0x00010004)
+[[0;32m  OK  [0m] Started Daily Cleanup of Temporary Directories.
+[[0;32m  OK  [0m] Listening on D-Bus System Message Bus Socket.
+[[0;32m  OK  [0m] Started Daily apt download activities.[   15.121873] sf_read_super_aux err=-71
+
+         Starting Docker Socket for the API.
+[[0;32m  OK  [0m] Started Ubuntu Advantage Timer for running repeated jobs.
+[[0;32m  OK  [0m] Listening on Open-iSCSI iscsid Socket.
+         Starting LXD - unix socket.
+         Starting Socket activation for snappy daemon.
+[[0;32m  OK  [0m] Listening on ACPID Listen Socket.
+[[0;32m  OK  [0m] Listening on cloud-init hotplug hook socket.
+[[0;32m  OK  [0m] Listening on UUID daemon activation socket.
+[[0;32m  OK  [0m] Started Discard unused blocks once a week.
+[[0;32m  OK  [0m] Started Daily apt upgrade and clean activities.
+[[0;32m  OK  [0m] Started Message of the Day.
+[[0;32m  OK  [0m] Reached target Timers.
+[[0;32m  OK  [0m] Started ACPI Events Check.
+[[0;32m  OK  [0m] Reached target Paths.
+[[0;32m  OK  [0m] Reached target Cloud-config availability.
+[[0;32m  OK  [0m] Started Availability of block devices.
+[[0;32m  OK  [[0;32m  OK  [0m] Started Message of the Day.
+         Stopping User Manager for UID 1000...
+[[0;32m  OK  [0m] Stopped User Manager for UID 1000.
+[[0;32m  OK  [0m] Removed sl[  294.803339] IPVS: rr: FWM 259 0x00000103 - no destination available
+[  295.836087] IPVS: rr: FWM 259 0x00000103 - no destination available
+[[0;32m  OK  [0m] Started Daily apt upgrade and clean activities.
+[19350.290377] Out of memory: Kill process 21571 (java) score 196 or sacrifice child
+[19350.297657] Killed process 21571 (java) total-vm:1640792kB, anon-rss:197452kB, file-rss:0kB, shmem-rss:0kB
+[19364.835830] IPVS: rr: FWM 285 0x0000011D - no destination available
+[19364.842227] IPVS: rr: FWM 285 0x0000011D - no destination available
+[19364.866690] IPVS: rr: FWM 285 0x0000011D - no destination available
+[19365.865372] IPVS: rr: FWM 285 0x0000011D - no destination available
+[19365.871174] IPVS: rr: FWM 285 0x0000011D - no destination available
+[19365.907017] IPVS: rr: FWM 285 0x0000011D - n[21899.707551] Out of memory: Kill process 10125 (java) score 172 or sacrifice child
+[21899.714873] Killed process 10125 (java) total-vm:1643472kB, anon-rss:173460kB, file-rss:0kB, shmem-rss:0kB
+ 285 0x0000011D - no destination available
+[19368.113409] IPVS: rr: FWM 285 0x0000011D - no destination available
+[23258.327226] Out of memory: Kill process 26016 (beam.smp) score 141 or sacrifice child
+[23258.334160] Killed process 26029 (erl_child_setup) total-vm:848kB, anon-rss:36kB, file-rss:4kB, shmem-rss:0kB
+[24473.031942] Out of memory: Kill process 26016 (beam.smp) score 141 or sacrifice child
+[24473.039741] Killed process 26016 (beam.smp) total-vm:1282660kB, anon-rss:71056kB, file-rss:0kB, shmem-rss:71676kB
+[30711.675899] Out of memory: Kill process 26138 (java) score 94 or sacrifice child
+[30711.683018] Killed process 26138 (java) total-vm:1568352kB, anon-rss:95096kB, file-rss:0kB, shmem-rss:0kB
+[30755.495587] IPVS: rr: FWM 427 0x000001AB - no destination available
+[30755.570795] IPVS: rr: FWM 427 0x000001AB - no destination available
+32m  OK  [0m] Started Hold until boot process finishes up.
+[[0;32m  OK  [0m] Started Terminate Plymouth Boot Screen.
+[[0;32m  OK  [0m] Started Serial Getty on ttyS0.
+         Starting Set console scheme...
+[[0;32m  OK  [0m] Started Authorization Manager.
+[[0;32m  OK  [0m] Started Accounts Service.
+[[0;32m  OK  [0m] Started LSB: Record successful boot for GRUB.
+[[0;32m  OK  [0m] Started Set console scheme.
+[[0;32m  OK  [0m] Created slice system-getty.slice.
+[[0;32m  OK  [0m] Started Getty on tty1.
+[[0;32m  OK  [0m] Reached target Login Prompts.
+[[0;32m  OK  [0m] Started LSB: automatic crash report generation.
+[[0;32m  OK  [0m] Started OpenBSD Secure Shell server.
+[[0;32m  OK  [0m] Started LXD - container startup/shutdown.
+[   17.047829] VBoxService 5.2.42_Ubuntu r137960 (verbosity: 0) linux.amd64 (Jun  5 2020 08:26:08) release log
+[   17.047829] 00:00:00.000731 main     Log opened 2025-07-01T06:21:00.602349000Z
+[   17.122978] 00:00:00.075914 main     OS Product: Linux
+[   17.160856] 00:00:00.113776 main     OS Release: 4.15.0-212-generic
+[   17.188909] 00:00:00.141844 main     OS Version: #223-Ubuntu SMP Tue May 23 13:09:22 UTC 2023
+[   17.224558] 00:00:00.177465 main     Executable: /usr/sbin/VBoxService
+[   17.224558] 00:00:00.177467 main     Process ID: 897
+[   17.224558] 00:00:00.177468 main     Package type: LINUX_64BITS_GENERIC (OSE)
+[   17.277576] 00:00:00.230503 main     5.2.42_Ubuntu r137960 started. Verbose level = 0
+[[0;32m  OK  [0m] Started Virtualbox guest utils.
+[[0;32m  OK  [0m] Created slice User Slice of vagrant.
+         Starting User Manager for UID 1000...
+[[0;32m  OK  [0m] Started Session 1 of user vagrant.
+[   18.254282] aufs 4.15-20180219
+[[0;32m  OK  [0m] Started User Manager for UID 1000.
+[[0;32m  OK  [0m] Started Snap Daemon.
+         Starting Wait until snapd is fully seeded...
+         Starting Time & Date Service...
+[[0;32m  OK  [0m] Started containerd container runtime.
+         Starting Docker Application Container Engine...
+[[0;32m  OK  [0m] Started Time & Date Service.
+[[0;32m  OK  [0m] Started Wait until snapd is fully seeded.
+         Starting Apply the settings specified in cloud-config...
+[   20.963719] kauditd_printk_skb: 5 callbacks suppressed
+[   20.963721] audit: type=1400 audit(1751350864.517:17): apparmor="STATUS" operation="profile_load" profile="unconfined" name="docker-default" pid=1093 comm="apparmor_parser"
+[   21.272688] cloud-init[1046]: Cloud-init v. 23.1.2-0ubuntu0~18.04.1 running 'modules:config' at Tue, 01 Jul 2025 06:21:04 +0000. Up 21.06 seconds.
+[[0;32m  OK  [0m] Started Apply the settings specified in cloud-config.
+
+Ubuntu 18.04.6 LTS worker02 ttyS0
+
+worker02 login: [   23.156651] bridge: filtering via arp/ip/ip6tables is no longer available by default. Update your scripts to load br_netfilter if you need this.
+[   23.192683] Bridge firewalling registered
+[   23.318124] nf_conntrack version 0.5.0 (8192 buckets, 32768 max)
+[   23.588963] Initializing XFRM netlink socket
+[   23.612254] Netfilter messages via NETLINK v0.30.
+[   23.620494] ctnetlink v0.93: registering with nfnetlink.
+[   23.869591] IPv6: ADDRCONF(NETDEV_UP): docker_gwbridge: link is not ready
+[   24.096712] IPv6: ADDRCONF(NETDEV_UP): docker0: link is not ready
+[   25.742001] br0: renamed from ov-001000-r1sfe
+[   25.793988] vxlan0: renamed from vx-001000-r1sfe
+[   25.823737] br0: port 1(vxlan0) entered blocking state
+[   25.828822] br0: port 1(vxlan0) entered disabled state
+[   25.858082] device vxlan0 entered promiscuous mode
+[   25.885198] br0: port 1(vxlan0) entered blocking state
+[   25.890505] br0: port 1(vxlan0) entered forwarding state
+[   25.949454] veth0: renamed from vethb868812
+[   25.983042] br0: port 2(veth0) entered blocking state
+[   25.987688] br0: port 2(veth0) entered disabled state
+[   26.035582] device veth0 entered promiscuous mode
+[   26.051235] br0: port 2(veth0) entered blocking state
+[   26.057025] br0: port 2(veth0) entered forwarding state
+[   26.290825] eth0: renamed from vethdffc6e2
+[   26.362509] docker_gwbridge: port 1(veth1ec22d3) entered blocking state
+[   26.369767] docker_gwbridge: port 1(veth1ec22d3) entered disabled state
+[   26.424910] device veth1ec22d3 entered promiscuous mode
+[   26.447222] IPv6: ADDRCONF(NETDEV_UP): veth1ec22d3: link is not ready
+[   26.467996] docker_gwbridge: port 1(veth1ec22d3) entered blocking state
+[   26.473975] docker_gwbridge: port 1(veth1ec22d3) entered forwarding state
+[   26.481446] docker_gwbridge: port 1(veth1ec22d3) entered disabled state
+[   26.568018] eth1: renamed from veth7175f9a
+[   26.595328] IPv6: ADDRCONF(NETDEV_CHANGE): veth1ec22d3: link becomes ready
+[   26.608662] docker_gwbridge: port 1(veth1ec22d3) entered blocking state
+[   26.614722] docker_gwbridge: port 1(veth1ec22d3) entered forwarding state
+[   26.636279] IPv6: ADDRCONF(NETDEV_CHANGE): docker_gwbridge: link becomes ready
+[   26.792113] IPVS: Registered protocols (TCP, UDP, SCTP, AH, ESP)
+[   26.817454] IPVS: Connection hash table configured (size=4096, memory=32Kbytes)
+[   26.853966] IPVS: ipvs loaded.
+[   27.128684] cloud-init[1566]: Cloud-init v. 23.1.2-0ubuntu0~18.04.1 running 'modules:final' at Tue, 01 Jul 2025 06:21:10 +0000. Up 26.68 seconds.
+[   27.157943] cloud-init[1566]: Cloud-init v. 23.1.2-0ubuntu0~18.04.1 finished at Tue, 01 Jul 2025 06:21:10 +0000. Datasource DataSourceNoCloud [seed=/dev/sdb][dsmode=net].  Up 27.10 seconds
+[   27.327204] IPVS: [rr] scheduler registered.
+[   66.893175] audit: type=1400 audit(1751350910.460:18): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="lxc-container-default" pid=3189 comm="apparmor_parser"
+[   66.925180] audit: type=1400 audit(1751350910.488:19): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="lxc-container-default-cgns" pid=3189 comm="apparmor_parser"
+[   66.957045] audit: type=1400 audit(1751350910.488:20): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="lxc-container-default-with-mounting" pid=3189 comm="apparmor_parser"
+[   66.989893] audit: type=1400 audit(1751350910.488:21): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="lxc-container-default-with-nesting" pid=3189 comm="apparmor_parser"
+[   67.110652] audit: type=1400 audit(1751350910.684:22): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="/sbin/dhclient" pid=3191 comm="apparmor_parser"
+[   67.137714] audit: type=1400 audit(1751350910.704:23): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="/usr/lib/NetworkManager/nm-dhcp-client.action" pid=3191 comm="apparmor_parser"
+[   67.161398] audit: type=1400 audit(1751350910.704:24): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="/usr/lib/NetworkManager/nm-dhcp-helper" pid=3191 comm="apparmor_parser"
+[   67.193556] audit: type=1400 audit(1751350910.704:25): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="/usr/lib/connman/scripts/dhclient-script" pid=3191 comm="apparmor_parser"
+[   67.236450] audit: type=1400 audit(1751350910.704:26): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="/usr/bin/lxc-start" pid=3193 comm="apparmor_parser"
+[   67.264589] audit: type=1400 audit(1751350910.836:27): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="/usr/bin/man" pid=3195 comm="apparmor_parser"
+[  102.054059] SGI XFS with ACLs, security attributes, realtime, no debug enabled
+[[0;32m  OK  [0m] Started Daily apt upgrade and clean activities.
+[  196.974534] br0: renamed from ov-001004-wx8oh
+[  196.996344] vxlan0: renamed from vx-001004-wx8oh
+[  197.016498] br0: port 1(vxlan0) entered blocking state
+[  197.021920] br0: port 1(vxlan0) entered disabled state
+[  197.032605] device vxlan0 entered promiscuous mode
+[  197.039764] br0: port 1(vxlan0) entered blocking state
+[  197.045285] br0: port 1(vxlan0) entered forwarding state
+[  197.086252] veth0: renamed from veth83bf9d5
+[  197.100971] br0: port 2(veth0) entered blocking state
+[  197.107451] br0: port 2(veth0) entered disabled state
+[  197.126805] device veth0 entered promiscuous mode
+[  197.137319] br0: port 2(veth0) entered blocking state
+[  197.142416] br0: port 2(veth0) entered forwarding state
+[  197.187384] eth0: renamed from vetha663234
+[  208.392123] veth1: renamed from vethfd65d63
+[  208.422484] br0: port 3(veth1) entered blocking state
+[  208.427386] br0: port 3(veth1) entered disabled state
+[  208.445917] device veth1 entered promiscuous mode
+[  208.457128] docker_gwbridge: port 2(veth86eea0f) entered blocking state
+[  208.462965] docker_gwbridge: port 2(veth86eea0f) entered disabled state
+[  208.475426] device veth86eea0f entered promiscuous mode
+[  208.511334] IPv6: ADDRCONF(NETDEV_UP): veth86eea0f: link is not ready
+[  208.527541] docker_gwbridge: port 2(veth86eea0f) entered blocking state
+[  208.534010] docker_gwbridge: port 2(veth86eea0f) entered forwarding state
+[  208.593308] veth1: renamed from veth40d4ac8
+[  208.613289] br0: port 3(veth1) entered blocking state
+[  208.619274] br0: port 3(veth1) entered disabled state
+[  208.640251] device veth1 entered promiscuous mode
+[  208.646358] br0: port 3(veth1) entered blocking state
+[  208.652124] br0: port 3(veth1) entered forwarding state
+[  208.866734] cgroup: cgroup: disabling cgroup2 socket matching due to net_prio or net_cls activation
+[  209.195492] eth0: renamed from vethd901130
+[  209.200793] docker_gwbridge: port 2(veth86eea0f) entered disabled state
+[  209.226867] eth1: renamed from veth4477718
+[  209.235963] br0: port 3(veth1) entered blocking state
+[  209.246363] br0: port 3(veth1) entered forwarding state
+[  209.354315] eth2: renamed from veth3ffab55
+[  209.360282] IPv6: ADDRCONF(NETDEV_CHANGE): veth86eea0f: link becomes ready
+[  209.367682] docker_gwbridge: port 2(veth86eea0f) entered blocking state
+[  209.373698] docker_gwbridge: port 2(veth86eea0f) entered forwarding state
+[  209.568952] IPVS: rr: FWM 284 0x0000011C - no destination available
+[  210.597117] IPVS: rr: FWM 284 0x0000011C - no destination available
+[  211.631966] IPVS: rr: FWM 284 0x0000011C - no destination available
+[  212.234006] veth2: renamed from veth5ea1579
+[  212.255967] br0: port 4(veth2) entered blocking state
+[  212.260839] br0: port 4(veth2) entered disabled state
+[  212.273822] device veth2 entered promiscuous mode
+[  212.287007] docker_gwbridge: port 3(veth65450c9) entered blocking state
+[  212.293597] docker_gwbridge: port 3(veth65450c9) entered disabled state
+[  212.302941] device veth65450c9 entered promiscuous mode
+[  212.330117] IPv6: ADDRCONF(NETDEV_UP): veth65450c9: link is not ready
+[  212.346733] docker_gwbridge: port 3(veth65450c9) entered blocking state
+[  212.352423] docker_gwbridge: port 3(veth65450c9) entered forwarding state
+[  212.417097] veth2: renamed from vethf389338
+[  212.439418] br0: port 4(veth2) entered blocking state
+[  212.444752] br0: port 4(veth2) entered disabled state
+[  212.457389] device veth2 entered promiscuous mode
+[  212.464678] br0: port 4(veth2) entered blocking state
+[  212.470643] br0: port 4(veth2) entered forwarding state
+[  212.638996] IPVS: rr: FWM 284 0x0000011C - no destination available
+[  212.730862] eth0: renamed from veth415b0ba
+[  212.735597] docker_gwbridge: port 3(veth65450c9) entered disabled state
+[  212.765715] eth1: renamed from veth88ec5fa
+[  212.773255] br0: port 4(veth2) entered blocking state
+[  212.778082] br0: port 4(veth2) entered forwarding state
+[  212.845315] eth2: renamed from vethea91f7d
+[  212.851510] IPv6: ADDRCONF(NETDEV_CHANGE): veth65450c9: link becomes ready
+[  212.863798] docker_gwbridge: port 3(veth65450c9) entered blocking state
+[  212.871739] docker_gwbridge: port 3(veth65450c9) entered forwarding state
+[  212.991738] IPVS: rr: FWM 284 0x0000011C - no destination available
+[  213.647726] IPVS: rr: FWM 284 0x0000011C - no destination available
+[  214.013872] IPVS: rr: FWM 284 0x0000011C - no destination available
+[  214.686541] IPVS: rr: FWM 284 0x0000011C - no destination available
+[  215.022287] IPVS: rr: FWM 284 0x0000011C - no destination available
+[  215.694316] IPVS: rr: FWM 284 0x0000011C - no destination available
+[  216.028889] IPVS: rr: FWM 284 0x0000011C - no destination available
+[  216.732656] IPVS: rr: FWM 284 0x0000011C - no destination available
+[  217.036308] IPVS: rr: FWM 284 0x0000011C - no destination available
+[  217.740356] IPVS: rr: FWM 284 0x0000011C - no destination available
+[  218.044087] IPVS: rr: FWM 284 0x0000011C - no destination available
+[  218.747623] IPVS: rr: FWM 284 0x0000011C - no destination available
+[  219.051719] IPVS: rr: FWM 284 0x0000011C - no destination available
+[  219.755685] IPVS: rr: FWM 284 0x0000011C - no destination available
+[  220.059294] IPVS: rr: FWM 284 0x0000011C - no destination available
+[  220.763509] IPVS: rr: FWM 284 0x0000011C - no destination available
+[  221.067813] IPVS: rr: FWM 284 0x0000011C - no destination available
+[  233.172554] veth3: renamed from veth2f5c721
+[  233.222832] br0: port 5(veth3) entered blocking state
+[  233.229209] br0: port 5(veth3) entered disabled state
+[  233.261538] device veth3 entered promiscuous mode
+[  233.307492] docker_gwbridge: port 4(vethf47667e) entered blocking state
+[  233.313632] docker_gwbridge: port 4(vethf47667e) entered disabled state
+[  233.356539] device vethf47667e entered promiscuous mode
+[  233.390577] IPv6: ADDRCONF(NETDEV_UP): vethf47667e: link is not ready
+[  233.410037] docker_gwbridge: port 4(vethf47667e) entered blocking state
+[  233.416169] docker_gwbridge: port 4(vethf47667e) entered forwarding state
+[  233.532952] veth3: renamed from vethb3ff51a
+[  233.580879] br0: port 5(veth3) entered blocking state
+[  233.585617] br0: port 5(veth3) entered disabled state
+[  233.616317] device veth3 entered promiscuous mode
+[  233.634133] br0: port 5(veth3) entered blocking state
+[  233.639153] br0: port 5(veth3) entered forwarding state
+[  234.103072] eth0: renamed from vethe8c183d
+[  234.116592] docker_gwbridge: port 4(vethf47667e) entered disabled state
+[  234.169534] eth1: renamed from veth7d9135b
+[  234.181229] br0: port 5(veth3) entered blocking state
+[  234.185887] br0: port 5(veth3) entered forwarding state
+[  234.349574] eth2: renamed from veth4bd65e3
+[  234.385093] IPv6: ADDRCONF(NETDEV_CHANGE): vethf47667e: link becomes ready
+[  234.393437] docker_gwbridge: port 4(vethf47667e) entered blocking state
+[  234.399232] docker_gwbridge: port 4(vethf47667e) entered forwarding state
+[  285.376323] veth4: renamed from veth123adf9
+[  285.386303] br0: port 6(veth4) entered blocking state
+[  285.390916] br0: port 6(veth4) entered disabled state
+[  285.397372] device veth4 entered promiscuous mode
+[  285.443179] docker_gwbridge: port 5(vethfbae3bb) entered blocking state
+[  285.450408] docker_gwbridge: port 5(vethfbae3bb) entered disabled state
+[  285.465113] device vethfbae3bb entered promiscuous mode
+[  285.482908] IPv6: ADDRCONF(NETDEV_UP): vethfbae3bb: link is not ready
+[  285.505318] docker_gwbridge: port 5(vethfbae3bb) entered blocking state
+[  285.511932] docker_gwbridge: port 5(vethfbae3bb) entered forwarding state
+[  285.769395] veth4: renamed from veth3901100
+[  285.843568] br0: port 6(veth4) entered blocking state
+[  285.848872] br0: port 6(veth4) entered disabled state
+[  285.898616] device veth4 entered promiscuous mode
+[  285.925363] br0: port 6(veth4) entered blocking state
+[  285.931413] br0: port 6(veth4) entered forwarding state
+[  286.361623] docker_gwbridge: port 5(vethfbae3bb) entered disabled state
+[  286.373549] br0: port 6(veth4) entered disabled state
+[  287.187886] eth0: renamed from veth89bec8b
+[  287.199358] br0: port 6(veth4) entered blocking state
+[  287.203996] br0: port 6(veth4) entered forwarding state
+[  287.288720] eth1: renamed from vethefcabeb
+[  287.308229] br0: port 6(veth4) entered blocking state
+[  287.314030] br0: port 6(veth4) entered forwarding state
+[  287.453273] eth2: renamed from veth3c9294b
+[  287.463781] IPv6: ADDRCONF(NETDEV_CHANGE): vethfbae3bb: link becomes ready
+[  287.470680] docker_gwbridge: port 5(vethfbae3bb) entered blocking state
+[  287.478403] docker_gwbridge: port 5(vethfbae3bb) entered forwarding state
+[ 7295.503292] 02:01:21.020666 timesync vgsvcTimeSyncWorker: Radical guest time change: 2 059 166 750 000ns (GuestNow=1 751 360 190 782 723 000 ns GuestLast=1 751 358 131 615 973 000 ns fSetTimeLastLoop=true )
+[15766.784096] 04:22:32.099636 timesync vgsvcTimeSyncWorker: Radical host time change: 2 454 384 000 000ns (HostNow=1 751 371 106 118 000 000 ns HostLast=1 751 368 651 734 000 000 ns)
+[15776.821690] 04:22:42.137295 timesync vgsvcTimeSyncWorker: Radical guest time change: 2 454 375 682 000ns (GuestNow=1 751 371 116 198 843 000 ns GuestLast=1 751 368 661 823 161 000 ns fSetTimeLastLoop=true )
+[17545.356531] br0: port 6(veth4) entered disabled state
+[17545.361461] veth89bec8b: renamed from eth0
+[17545.370771] br0: port 3(veth1) entered disabled state
+[17545.375413] vethd901130: renamed from eth0
+[17545.391001] veth415b0ba: renamed from eth0
+[17545.403395] br0: port 4(veth2) entered disabled state
+[17545.418173] br0: port 5(veth3) entered disabled state
+[17545.423615] vethe8c183d: renamed from eth0
+[17545.442176] br0: port 6(veth4) entered disabled state
+[17545.449694] device veth4 left promiscuous mode
+[17545.454334] br0: port 6(veth4) entered disabled state
+[17545.653338] br0: port 3(veth1) entered disabled state
+[17545.658308] device veth1 left promiscuous mode
+[17545.662643] br0: port 3(veth1) entered disabled state
+[17545.725858] br0: port 6(veth4) entered disabled state
+[17545.738578] vethefcabeb: renamed from eth1
+[17545.789810] br0: port 4(veth2) entered disabled state
+[17545.802069] device veth2 left promiscuous mode
+[17545.806400] br0: port 4(veth2) entered disabled state
+[17545.839519] docker_gwbridge: port 5(vethfbae3bb) entered disabled state
+[17545.846919] veth3c9294b: renamed from eth2
+[17545.853581] br0: port 3(veth1) entered disabled state
+[17545.858765] br0: port 5(veth3) entered disabled state
+[17545.872875] device veth3 left promiscuous mode
+[17545.876995] br0: port 5(veth3) entered disabled state
+[17545.883261] veth4477718: renamed from eth1
+[17545.911291] br0: port 4(veth2) entered disabled state
+[17545.938676] docker_gwbridge: port 5(vethfbae3bb) entered disabled state
+[17545.955187] device vethfbae3bb left promiscuous mode
+[17545.960126] docker_gwbridge: port 5(vethfbae3bb) entered disabled state
+[17545.983108] veth88ec5fa: renamed from eth1
+[17546.003186] docker_gwbridge: port 2(veth86eea0f) entered disabled state
+[17546.013563] veth3ffab55: renamed from eth2
+[17546.084643] br0: port 5(veth3) entered disabled state
+[17546.092432] veth7d9135b: renamed from eth1
+[17546.103446] docker_gwbridge: port 3(veth65450c9) entered disabled state
+[17546.114541] vethea91f7d: renamed from eth2
+[17546.163263] docker_gwbridge: port 4(vethf47667e) entered disabled state
+[17546.171638] veth4bd65e3: renamed from eth2
+[17546.224816] docker_gwbridge: port 3(veth65450c9) entered disabled state
+[17546.239854] device veth65450c9 left promiscuous mode
+[17546.244465] docker_gwbridge: port 3(veth65450c9) entered disabled state
+[17546.266010] docker_gwbridge: port 4(vethf47667e) entered disabled state
+[17546.279934] device vethf47667e left promiscuous mode
+[17546.284606] docker_gwbridge: port 4(vethf47667e) entered disabled state
+[17546.306319] br0: port 4(veth2) entered disabled state
+[17546.324087] device veth2 left promiscuous mode
+[17546.329571] br0: port 4(veth2) entered disabled state
+[17546.348139] br0: port 6(veth4) entered disabled state
+[17546.376369] device veth4 left promiscuous mode
+[17546.381853] br0: port 6(veth4) entered disabled state
+[17546.405551] docker_gwbridge: port 2(veth86eea0f) entered disabled state
+[17546.442442] device veth86eea0f left promiscuous mode
+[17546.447046] docker_gwbridge: port 2(veth86eea0f) entered disabled state
+[17546.505562] br0: port 5(veth3) entered disabled state
+[17546.528972] device veth3 left promiscuous mode
+[17546.535001] br0: port 5(veth3) entered disabled state
+[17546.559889] br0: port 2(veth0) entered disabled state
+[17546.564346] br0: port 1(vxlan0) entered disabled state
+[17546.573308] ov-001004-wx8oh: renamed from br0
+[17546.578000] device veth0 left promiscuous mode
+[17546.582497] ov-001004-wx8oh: port 2(veth0) entered disabled state
+[17546.590385] device vxlan0 left promiscuous mode
+[17546.594579] ov-001004-wx8oh: port 1(vxlan0) entered disabled state
+[17546.600840] br0: port 3(veth1) entered disabled state
+[17546.614234] device veth1 left promiscuous mode
+[17546.619203] br0: port 3(veth1) entered disabled state
+[17546.626346] vx-001004-wx8oh: renamed from vxlan0
+[17546.647701] veth83bf9d5: renamed from veth0
+[17546.695531] vetha663234: renamed from eth0
+[17558.384646] br0: renamed from ov-001004-wx8oh
+[17558.416832] vxlan0: renamed from vx-001004-wx8oh
+[17558.428098] br0: port 1(vxlan0) entered blocking state
+[17558.435978] br0: port 1(vxlan0) entered disabled state
+[17558.445480] device vxlan0 entered promiscuous mode
+[17558.462164] br0: port 1(vxlan0) entered blocking state
+[17558.470231] br0: port 1(vxlan0) entered forwarding state
+[17558.509819] veth0: renamed from vethfb4877b
+[17558.530969] br0: port 2(veth0) entered blocking state
+[17558.539248] br0: port 2(veth0) entered disabled state
+[17558.551781] device veth0 entered promiscuous mode
+[17558.565873] br0: port 2(veth0) entered blocking state
+[17558.573539] br0: port 2(veth0) entered forwarding state
+[17558.637487] eth0: renamed from vethce0f2ea
+[17563.200782] veth5: renamed from veth0845607
+[17563.215584] br0: port 3(veth5) entered blocking state
+[17563.221661] br0: port 3(veth5) entered disabled state
+[17563.232448] device veth5 entered promiscuous mode
+[17563.242307] docker_gwbridge: port 2(veth0d65d10) entered blocking state
+[17563.248766] docker_gwbridge: port 2(veth0d65d10) entered disabled state
+[17563.257543] device veth0d65d10 entered promiscuous mode
+[17563.278734] IPv6: ADDRCONF(NETDEV_UP): veth0d65d10: link is not ready
+[17563.290781] docker_gwbridge: port 2(veth0d65d10) entered blocking state
+[17563.296721] docker_gwbridge: port 2(veth0d65d10) entered forwarding state
+[17563.357971] veth1: renamed from veth71efe21
+[17563.376280] br0: port 3(veth1) entered blocking state
+[17563.383108] br0: port 3(veth1) entered disabled state
+[17563.401165] device veth1 entered promiscuous mode
+[17563.408372] br0: port 3(veth1) entered blocking state
+[17563.413676] br0: port 3(veth1) entered forwarding state
+[17563.882148] eth0: renamed from veth4fd31db
+[17563.887754] docker_gwbridge: port 2(veth0d65d10) entered disabled state
+[17563.905418] eth1: renamed from veth0dc095f
+[17563.909863] br0: port 3(veth5) entered blocking state
+[17563.914574] br0: port 3(veth5) entered forwarding state
+[17563.966327] eth2: renamed from veth4b2dea0
+[17563.971261] IPv6: ADDRCONF(NETDEV_CHANGE): veth0d65d10: link becomes ready
+[17563.977586] docker_gwbridge: port 2(veth0d65d10) entered blocking state
+[17563.983341] docker_gwbridge: port 2(veth0d65d10) entered forwarding state
+[17735.122635] veth6: renamed from veth7c0b344
+[17735.245824] br0: port 4(veth6) entered blocking state
+[17735.256387] br0: port 4(veth6) entered disabled state
+[17735.320961] device veth6 entered promiscuous mode
+[17735.355725] veth2: renamed from veth0bcb4ab
+[17735.377231] br0: port 4(veth2) entered blocking state
+[17735.385038] br0: port 4(veth2) entered disabled state
+[17735.402555] device veth2 entered promiscuous mode
+[17735.470449] br0: port 4(veth2) entered blocking state
+[17735.478947] br0: port 4(veth2) entered forwarding state
+[17735.532791] veth7: renamed from veth65925ce
+[17735.614356] docker_gwbridge: port 3(veth3abd96e) entered blocking state
+[17735.626903] docker_gwbridge: port 3(veth3abd96e) entered disabled state
+[17735.681522] device veth3abd96e entered promiscuous mode
+[17735.704821] br0: port 5(veth7) entered blocking state
+[17735.713761] br0: port 5(veth7) entered disabled state
+[17735.740649] device veth7 entered promiscuous mode
+[17735.771227] IPv6: ADDRCONF(NETDEV_UP): veth3abd96e: link is not ready
+[17735.821135] docker_gwbridge: port 3(veth3abd96e) entered blocking state
+[17735.834137] docker_gwbridge: port 3(veth3abd96e) entered forwarding state
+[17735.864371] br0: port 5(veth7) entered blocking state
+[17735.873099] br0: port 5(veth7) entered forwarding state
+[17736.088776] docker_gwbridge: port 4(veth729ca8e) entered blocking state
+[17736.099129] docker_gwbridge: port 4(veth729ca8e) entered disabled state
+[17736.119267] device veth729ca8e entered promiscuous mode
+[17736.133862] br0: port 4(veth2) entered disabled state
+[17736.149995] br0: port 5(veth7) entered disabled state
+[17736.168924] docker_gwbridge: port 3(veth3abd96e) entered disabled state
+[17736.213197] IPv6: ADDRCONF(NETDEV_UP): veth729ca8e: link is not ready
+[17736.317289] veth3: renamed from veth03cbbc9
+[17736.389648] br0: port 5(veth3) entered blocking state
+[17736.398533] br0: port 5(veth3) entered disabled state
+[17736.488327] device veth3 entered promiscuous mode
+[17736.541382] docker_gwbridge: port 5(veth144a64b) entered blocking state
+[17736.554084] docker_gwbridge: port 5(veth144a64b) entered disabled state
+[17736.632234] device veth144a64b entered promiscuous mode
+[17736.664051] br0: port 5(veth3) entered blocking state
+[17736.673068] br0: port 5(veth3) entered forwarding state
+[17736.744719] IPv6: ADDRCONF(NETDEV_UP): veth144a64b: link is not ready
+[17736.794944] docker_gwbridge: port 5(veth144a64b) entered blocking state
+[17736.806418] docker_gwbridge: port 5(veth144a64b) entered forwarding state
+[17737.053071] veth4: renamed from vethbe4db01
+[17737.157879] br0: port 5(veth3) entered disabled state
+[17737.174294] docker_gwbridge: port 5(veth144a64b) entered disabled state
+[17737.197567] br0: port 6(veth4) entered blocking state
+[17737.205231] br0: port 6(veth4) entered disabled state
+[17737.337840] device veth4 entered promiscuous mode
+[17737.512681] veth8: renamed from veth64fcc0b
+[17737.645200] br0: port 6(veth8) entered blocking state
+[17737.653935] br0: port 6(veth8) entered disabled state
+[17737.835962] device veth8 entered promiscuous mode
+[17738.198654] eth0: renamed from vethe24b234
+[17738.286056] br0: port 5(veth3) entered blocking state
+[17738.292343] br0: port 5(veth3) entered forwarding state
+[17738.322735] eth1: renamed from vethde3adf2
+[17738.398688] br0: port 4(veth6) entered blocking state
+[17738.403758] br0: port 4(veth6) entered forwarding state
+[17738.625534] eth0: renamed from veth41b3f46
+[17738.631435] br0: port 4(veth2) entered blocking state
+[17738.637888] br0: port 4(veth2) entered forwarding state
+[17738.661827] eth1: renamed from veth9032ed6
+[17738.668496] br0: port 6(veth8) entered blocking state
+[17738.673713] br0: port 6(veth8) entered forwarding state
+[17738.747300] eth2: renamed from vethba98a59
+[17738.762968] IPv6: ADDRCONF(NETDEV_CHANGE): veth144a64b: link becomes ready
+[17738.771338] docker_gwbridge: port 5(veth144a64b) entered blocking state
+[17738.777730] docker_gwbridge: port 5(veth144a64b) entered forwarding state
+[17739.546857] eth0: renamed from veth5cdbd6f
+[17739.568658] br0: port 6(veth4) entered blocking state
+[17739.574427] br0: port 6(veth4) entered forwarding state
+[17739.623429] eth1: renamed from vethb007697
+[17739.658403] br0: port 5(veth7) entered blocking state
+[17739.663061] br0: port 5(veth7) entered forwarding state
+[17739.791982] eth2: renamed from veth801e3af
+[17739.812390] IPv6: ADDRCONF(NETDEV_CHANGE): veth729ca8e: link becomes ready
+[17739.834353] docker_gwbridge: port 4(veth729ca8e) entered blocking state
+[17739.841459] docker_gwbridge: port 4(veth729ca8e) entered forwarding state
+[17740.716113] eth2: renamed from vethc839e90
+[17740.727647] IPv6: ADDRCONF(NETDEV_CHANGE): veth3abd96e: link becomes ready
+[17740.743743] docker_gwbridge: port 3(veth3abd96e) entered blocking state
+[17740.749912] docker_gwbridge: port 3(veth3abd96e) entered forwarding state
+[17774.034342] veth5: renamed from veth1ce103b
+[17774.074449] br0: port 7(veth5) entered blocking state
+[17774.078898] br0: port 7(veth5) entered disabled state
+[17774.117380] device veth5 entered promiscuous mode
+[17774.173155] docker_gwbridge: port 6(veth277c99d) entered blocking state
+[17774.180661] docker_gwbridge: port 6(veth277c99d) entered disabled state
+[17774.213500] device veth277c99d entered promiscuous mode
+[17774.246610] IPv6: ADDRCONF(NETDEV_UP): veth277c99d: link is not ready
+[17774.273086] docker_gwbridge: port 6(veth277c99d) entered blocking state
+[17774.279123] docker_gwbridge: port 6(veth277c99d) entered forwarding state
+[17774.390308] veth9: renamed from vetha885523
+[17774.418081] br0: port 7(veth9) entered blocking state
+[17774.423328] br0: port 7(veth9) entered disabled state
+[17774.444431] device veth9 entered promiscuous mode
+[17774.468567] br0: port 7(veth9) entered blocking state
+[17774.474260] br0: port 7(veth9) entered forwarding state
+[17775.029563] docker_gwbridge: port 6(veth277c99d) entered disabled state
+[17775.045067] br0: port 7(veth9) entered disabled state
+[17775.055507] eth0: renamed from veth8430456
+[17775.060158] br0: port 7(veth5) entered blocking state
+[17775.064789] br0: port 7(veth5) entered forwarding state
+[17775.131205] eth1: renamed from vetha2dc732
+[17775.140847] br0: port 7(veth9) entered blocking state
+[17775.145548] br0: port 7(veth9) entered forwarding state
+[17775.260057] eth2: renamed from veth7a01564
+[17775.277132] IPv6: ADDRCONF(NETDEV_CHANGE): veth277c99d: link becomes ready
+[17775.283291] docker_gwbridge: port 6(veth277c99d) entered blocking state
+[17775.289181] docker_gwbridge: port 6(veth277c99d) entered forwarding state
+[18140.318625] 05:02:05.634243 timesync vgsvcTimeSyncWorker: Radical host time change: 2 395 454 000 000ns (HostNow=1 751 375 864 923 000 000 ns HostLast=1 751 373 469 469 000 000 ns)
+[18150.734779] 05:02:15.998932 timesync vgsvcTimeSyncWorker: Radical guest time change: 2 395 720 016 000ns (GuestNow=1 751 375 875 327 058 000 ns GuestLast=1 751 373 479 607 042 000 ns fSetTimeLastLoop=true )
+[24223.450708] 06:43:28.579333 timesync vgsvcTimeSyncWorker: Radical host time change: 45 909 784 000 000ns (HostNow=1 751 427 841 973 000 000 ns HostLast=1 751 381 932 189 000 000 ns)
+[24239.518353] 06:43:43.832635 timesync vgsvcTimeSyncWorker: Radical guest time change: 45 916 040 529 000ns (GuestNow=1 751 427 859 329 946 000 ns GuestLast=1 751 381 943 289 417 000 ns fSetTimeLastLoop=true )
+[24848.727778] erts_sched_1 invoked oom-killer: gfp_mask=0x14200ca(GFP_HIGHUSER_MOVABLE), nodemask=(null), order=0, oom_score_adj=0
+[24848.738159] erts_sched_1 cpuset=ddc47747d0e405230023223eee4b86fd0108a260a5f897cb7004cfdc33ffd4e0 mems_allowed=0
+[24848.747022] CPU: 0 PID: 18008 Comm: erts_sched_1 Tainted: G      D          4.15.0-212-generic #223-Ubuntu
+[24848.755437] Hardware name: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+[24848.762516] Call Trace:
+[24848.769010]  dump_stack+0x6d/0x8b
+[24848.772374]  dump_header+0x71/0x282
+[24848.775753]  ? ___ratelimit+0x9c/0x100
+[24848.780178]  oom_kill_process+0x21f/0x420
+[24848.783915]  out_of_memory+0x116/0x4e0
+[24848.787519]  __alloc_pages_slowpath+0xa3d/0xe70
+[24848.791969]  __alloc_pages_nodemask+0x29a/0x2c0
+[24848.796108]  alloc_pages_current+0x6a/0xe0
+[24848.800059]  __page_cache_alloc+0x81/0xa0
+[24848.803812]  filemap_fault+0x42f/0x750
+[24848.807565]  ? filemap_map_pages+0x181/0x390
+[24848.812022]  ext4_filemap_fault+0x31/0x50
+[24848.816372]  __do_fault+0x34/0x100
+[24848.819628]  __handle_mm_fault+0x982/0xc50
+[24848.823460]  handle_mm_fault+0xe7/0x260
+[24848.827273]  __do_page_fault+0x281/0x4b0
+[24848.830991]  do_page_fault+0x2e/0xe0
+[24848.834668]  ? page_fault+0x2f/0x50
+[24848.837956]  page_fault+0x45/0x50
+[24848.841522] RIP: 0033:0x55875e1cc4c0
+[24848.844915] RSP: 002b:00007f660877e808 EFLAGS: 00010202
+[24848.849678] RAX: ffff8099fbe5fb7d RBX: 00007f66045a1638 RCX: 00007f6604572b00
+[24848.856066] RDX: 0000000000000001 RSI: 00007f66045a1682 RDI: 00007f660ebbac82
+[24848.862066] RBP: 00000000cc386b7a R08: 00007f660eb4e8e0 R09: 000055875e43f2d0
+[24848.868186] R10: 000000009e3779b9 R11: 0000000062000000 R12: 0000000000000000
+[24848.874307] R13: 00007f660ebbac82 R14: 00007f660877e860 R15: 00007f660456c9d8
+[24848.880819] Mem-Info:
+[24848.883534] active_anon:206526 inactive_anon:9110 isolated_anon:0
+[24848.883534]  active_file:98 inactive_file:410 isolated_file:3
+[24848.883534]  unevictable:0 dirty:0 writeback:0 unstable:0
+[24848.883534]  slab_reclaimable:6451 slab_unreclaimable:9034
+[24848.883534]  mapped:9120 shmem:9287 pagetables:1582 bounce:0
+[24848.883534]  free:12187 free_pcp:173 free_cma:0
+[24848.909945] Node 0 active_anon:826104kB inactive_anon:36440kB active_file:392kB inactive_file:1640kB unevictable:0kB isolated(anon):0kB isolated(file):12kB mapped:36480kB dirty:0kB writeback:0kB shmem:37148kB shmem_thp: 0kB shmem_pmdmapped: 0kB anon_thp: 0kB writeback_tmp:0kB unstable:0kB all_unreclaimable? no
+[24848.931507] Node 0 DMA free:4500kB min:728kB low:908kB high:1088kB active_anon:10384kB inactive_anon:360kB active_file:0kB inactive_file:0kB unevictable:0kB writepending:0kB present:15992kB managed:15908kB mlocked:0kB kernel_stack:12kB pagetables:44kB bounce:0kB free_pcp:0kB local_pcp:0kB free_cma:0kB
+[24848.952566] lowmem_reserve[]: 0 944 944 944 944
+[24848.956610] Node 0 DMA32 free:44248kB min:44324kB low:55404kB high:66484kB active_anon:815720kB inactive_anon:36080kB active_file:392kB inactive_file:1640kB unevictable:0kB writepending:0kB present:1032128kB managed:992808kB mlocked:0kB kernel_stack:4692kB pagetables:6284kB bounce:0kB free_pcp:692kB local_pcp:692kB free_cma:0kB
+[24848.979169] lowmem_reserve[]: 0 0 0 0 0
+[24848.983172] Node 0 DMA: 7*4kB (ME) 15*8kB (UME) 12*16kB (ME) 12*32kB (UE) 5*64kB (UE) 5*128kB (UME) 3*256kB (UME) 2*512kB (UE) 1*1024kB (M) 0*2048kB 0*4096kB = 4500kB
+[24848.995310] Node 0 DMA32: 902*4kB (UMEH) 504*8kB (UME) 300*16kB (UMEH) 224*32kB (UME) 97*64kB (UMEH) 76*128kB (UMEH) 18*256kB (UMEH) 8*512kB (UMEH) 0*1024kB 0*2048kB 0*4096kB = 44248kB
+[24849.009551] Node 0 hugepages_total=0 hugepages_free=0 hugepages_surp=0 hugepages_size=2048kB
+[24849.016822] 9801 total pagecache pages
+[24849.020151] 0 pages in swap cache
+[24849.023743] Swap cache stats: add 0, delete 0, find 0/0
+[24849.028587] Free swap  = 0kB
+[24849.031435] Total swap = 0kB
+[24849.034310] 262030 pages RAM
+[24849.037404] 0 pages HighMem/MovableOnly
+[24849.041030] 9851 pages reserved
+[24849.044471] 0 pages cma reserved
+[24849.047476] 0 pages hwpoisoned
+[24849.050504] [ pid ]   uid  tgid total_vm      rss pgtables_bytes swapents oom_score_adj name
+[24849.057572] [  416]     0   416    23687      176   184320        0             0 systemd-journal
+[24849.065188] [  419]     0   419    26477       47    98304        0             0 lvmetad
+[24849.072087] [  433]     0   433    10905      377   114688        0         -1000 systemd-udevd
+[24849.079354] [  634]   101   634    17657      151   172032        0             0 systemd-resolve
+[24849.086989] [  769]     0   769    42815     2056   225280        0             0 networkd-dispat
+[24849.094916] [  770]   103   770    12542      185   131072        0          -900 dbus-daemon
+[24849.102664] [  780]     0   780    17611      167   184320        0             0 systemd-logind
+[24849.110785] [  783]     0   783     7938       76   102400        0             0 cron
+[24849.117664] [  784]   102   784    65762      312   155648        0             0 rsyslogd
+[24849.125581] [  792]     0   792    71999      221   200704        0             0 accounts-daemon
+[24849.133095] [  793]     0   793   161122      206   155648        0             0 lxcfs
+[24849.139698] [  806]     0   806     7084       51    98304        0             0 atd
+[24849.146288] [  847]     0   847   344923     3603   327680        0          -999 containerd
+[24849.153583] [  860]     0   860    72221      211   204800        0             0 polkitd
+[24849.160686] [  862]     0   862    46923     1977   262144        0             0 unattended-upgr
+[24849.167951] [  866]     0   866     4105       38    77824        0             0 agetty
+[24849.175667] [  882]     0   882    18076      181   184320        0         -1000 sshd
+[24849.182399] [  883]     0   883     3724       33    73728        0             0 agetty
+[24849.189248] [  928]     0   928    78248      118   143360        0             0 VBoxService
+[24849.196492] [ 1031]     0  1031   370831    13281   577536        0          -500 dockerd
+[24849.203431] [ 1930]   100  1930    20014      183   180224        0             0 systemd-network
+[24849.210893] [16863]     0 16863   180189      622   110592        0          -998 containerd-shim
+[24849.218640] [16892]     0 16892   408965    38772   507904        0             0 java
+[24849.225358] [17374]     0 17374   180061      660   114688        0          -998 containerd-shim
+[24849.232725] [17405]     0 17405   405136    39957   475136        0             0 java
+[24849.240027] [17429]     0 17429   180189      616   106496        0          -998 containerd-shim
+[24849.248181] [17457]     0 17457   404472    41390   471040        0             0 java
+[24849.255829] [17494]     0 17494   180189      652   110592        0          -998 containerd-shim
+[24849.263695] [17526]     0 17526   405397    40050   471040        0             0 java
+[24849.271130] [17879]     0 17879   180125      582   106496        0          -998 containerd-shim
+[24849.279016] [17911]   100 17911      414       23    49152        0             0 rabbitmq-server
+[24849.286545] [17986]   100 17986   320383    35638   442368        0             0 beam.smp
+[24849.293656] [18007]   100 18007      212        9    36864        0             0 erl_child_setup
+[24849.301516] [18026]   100 18026      211        9    40960        0             0 memsup
+[24849.308657] [18027]   100 18027      211        1    40960        0             0 cpu_sup
+[24849.315773] [18031]   100 18031      223       10    36864        0             0 inet_gethost
+[24849.323601] [18032]   100 18032      223       11    36864        0             0 inet_gethost
+[24849.331377] [18041]   100 18041      235       16    40960        0             0 epmd
+[24849.338867] [19438]     0 19438    14808      115   155648        0             0 cron
+[24849.345948] [19440]     0 19440    14808      115   151552        0             0 cron
+[24849.353211] Out of memory: Kill process 17457 (java) score 164 or sacrifice child
+[24849.360204] Killed process 17457 (java) total-vm:1617888kB, anon-rss:165560kB, file-rss:0kB, shmem-rss:0kB
+[24850.635381] oom_reaper: reaped process 17457 (java), now anon-rss:0kB, file-rss:0kB, shmem-rss:0kB
+[24852.975296] br0: port 6(veth4) entered disabled state
+[24852.983994] veth5cdbd6f: renamed from eth0
+[24853.116192] br0: port 6(veth4) entered disabled state
+[24853.127556] device veth4 left promiscuous mode
+[24853.131657] br0: port 6(veth4) entered disabled state
+[24853.429701] vethb007697: renamed from eth1
+[24853.437022] br0: port 5(veth7) entered disabled state
+[24853.517612] docker_gwbridge: port 4(veth729ca8e) entered disabled state
+[24853.524926] veth801e3af: renamed from eth2
+[24853.627023] docker_gwbridge: port 4(veth729ca8e) entered disabled state
+[24853.663341] device veth729ca8e left promiscuous mode
+[24853.667891] docker_gwbridge: port 4(veth729ca8e) entered disabled state
+[24853.704815] br0: port 5(veth7) entered disabled state
+[24853.731275] device veth7 left promiscuous mode
+[24853.735533] br0: port 5(veth7) entered disabled state
+[30682.335220] veth10: renamed from vethe7a893d
+[30682.387263] veth13: renamed from veth7511275
+[30682.425772] br0: port 5(veth13) entered blocking state
+[30682.430772] br0: port 5(veth13) entered disabled state
+[30682.476172] device veth13 entered promiscuous mode
+[30682.504116] br0: port 8(veth10) entered blocking state
+[30682.509577] br0: port 8(veth10) entered disabled state
+[30682.533649] device veth10 entered promiscuous mode
+[30682.603559] br0: port 5(veth13) entered blocking state
+[30682.608467] br0: port 5(veth13) entered forwarding state
+[30682.685139] veth11: renamed from vethdd7d26f
+[30682.735904] br0: port 9(veth11) entered blocking state
+[30682.740646] br0: port 9(veth11) entered disabled state
+[30682.781798] device veth11 entered promiscuous mode
+[30682.883345] veth12: renamed from vethcd2e3fb
+[30682.893255] br0: port 10(veth12) entered blocking state
+[30682.898598] br0: port 10(veth12) entered disabled state
+[30683.048494] device veth12 entered promiscuous mode
+[30683.092591] br0: port 10(veth12) entered blocking state
+[30683.097235] br0: port 10(veth12) entered forwarding state
+[30683.125596] br0: port 10(veth12) entered disabled state
+[30683.133487] br0: port 5(veth13) entered disabled state
+[30683.325564] docker_gwbridge: port 4(veth0fdd4b3) entered blocking state
+[30683.331577] docker_gwbridge: port 4(veth0fdd4b3) entered disabled state
+[30683.374151] device veth0fdd4b3 entered promiscuous mode
+[30683.421816] IPv6: ADDRCONF(NETDEV_UP): veth0fdd4b3: link is not ready
+[30683.435654] docker_gwbridge: port 4(veth0fdd4b3) entered blocking state
+[30683.441274] docker_gwbridge: port 4(veth0fdd4b3) entered forwarding state
+[30683.614337] docker_gwbridge: port 7(vethddbc022) entered blocking state
+[30683.619892] docker_gwbridge: port 7(vethddbc022) entered disabled state
+[30683.677085] device vethddbc022 entered promiscuous mode
+[30683.714433] IPv6: ADDRCONF(NETDEV_UP): vethddbc022: link is not ready
+[30683.724369] docker_gwbridge: port 7(vethddbc022) entered blocking state
+[30683.729948] docker_gwbridge: port 7(vethddbc022) entered forwarding state
+[30683.831394] veth6: renamed from vetheef2194
+[30683.870834] br0: port 6(veth6) entered blocking state
+[30683.875829] br0: port 6(veth6) entered disabled state
+[30683.894042] device veth6 entered promiscuous mode
+[30683.906216] br0: port 6(veth6) entered blocking state
+[30683.910607] br0: port 6(veth6) entered forwarding state
+[30683.938325] docker_gwbridge: port 8(vetha20316e) entered blocking state
+[30683.943863] docker_gwbridge: port 8(vetha20316e) entered disabled state
+[30683.974779] device vetha20316e entered promiscuous mode
+[30684.021047] IPv6: ADDRCONF(NETDEV_UP): vetha20316e: link is not ready
+[30684.045820] docker_gwbridge: port 8(vetha20316e) entered blocking state
+[30684.052120] docker_gwbridge: port 8(vetha20316e) entered forwarding state
+[30684.142588] veth7: renamed from veth982f0f1
+[30684.163601] docker_gwbridge: port 4(veth0fdd4b3) entered disabled state
+[30684.189888] docker_gwbridge: port 7(vethddbc022) entered disabled state
+[30684.196480] br0: port 6(veth6) entered disabled state
+[30684.202023] docker_gwbridge: port 8(vetha20316e) entered disabled state
+[30684.236225] br0: port 8(veth7) entered blocking state
+[30684.240687] br0: port 8(veth7) entered disabled state
+[30684.275765] device veth7 entered promiscuous mode
+[30684.338745] docker_gwbridge: port 9(veth4f367f3) entered blocking state
+[30684.346084] docker_gwbridge: port 9(veth4f367f3) entered disabled state
+[30684.394020] device veth4f367f3 entered promiscuous mode
+[30684.426032] veth8: renamed from vethfc3e128
+[30684.488534] IPv6: ADDRCONF(NETDEV_UP): veth4f367f3: link is not ready
+[30684.539985] docker_gwbridge: port 9(veth4f367f3) entered blocking state
+[30684.546136] docker_gwbridge: port 9(veth4f367f3) entered forwarding state
+[30684.587614] br0: port 9(veth8) entered blocking state
+[30684.592341] br0: port 9(veth8) entered disabled state
+[30684.630790] device veth8 entered promiscuous mode
+[30684.682021] br0: port 9(veth8) entered blocking state
+[30684.686451] br0: port 9(veth8) entered forwarding state
+[30684.783300] veth9: renamed from veth1d875c4
+[30684.874465] br0: port 10(veth9) entered blocking state
+[30684.879078] br0: port 10(veth9) entered disabled state
+[30684.916108] device veth9 entered promiscuous mode
+[30684.938978] br0: port 10(veth9) entered blocking state
+[30684.943355] br0: port 10(veth9) entered forwarding state
+[30685.173662] br0: port 9(veth8) entered disabled state
+[30685.180193] docker_gwbridge: port 9(veth4f367f3) entered disabled state
+[30685.195791] br0: port 10(veth9) entered disabled state
+[30685.442196] IPVS: rr: FWM 341 0x00000155 - no destination available
+[30686.459954] IPVS: rr: FWM 341 0x00000155 - no destination available
+[30687.001270] IPVS: rr: FWM 341 0x00000155 - no destination available
+[30688.026406] IPVS: rr: FWM 341 0x00000155 - no destination available
+[30689.601989] br0: port 7(veth5) entered disabled state
+[30689.606458] veth8430456: renamed from eth0
+[30689.689307] br0: port 7(veth5) entered disabled state
+[30689.698262] device veth5 left promiscuous mode
+[30689.702321] br0: port 7(veth5) entered disabled state
+[30689.910930] br0: port 7(veth9) entered disabled state
+[30689.916665] vetha2dc732: renamed from eth1
+[30690.004226] docker_gwbridge: port 6(veth277c99d) entered disabled state
+[30690.020342] veth7a01564: renamed from eth2
+[30690.067152] docker_gwbridge: port 6(veth277c99d) entered disabled state
+[30690.087908] device veth277c99d left promiscuous mode
+[30690.092115] docker_gwbridge: port 6(veth277c99d) entered disabled state
+[30690.149410] br0: port 7(veth9) entered disabled state
+[30690.166520] device veth9 left promiscuous mode
+[30690.170522] br0: port 7(veth9) entered disabled state
+[30690.673784] eth0: renamed from vethec85569
+[30690.683305] br0: port 8(veth7) entered blocking state
+[30690.687579] br0: port 8(veth7) entered forwarding state
+[30690.713822] eth1: renamed from veth339b124
+[30690.731369] eth0: renamed from veth1894e6d
+[30690.735334] br0: port 8(veth10) entered blocking state
+[30690.739764] br0: port 8(veth10) entered forwarding state
+[30690.751182] br0: port 10(veth9) entered blocking state
+[30690.755399] br0: port 10(veth9) entered forwarding state
+[30690.775147] eth1: renamed from veth09d1683
+[30690.783003] br0: port 10(veth12) entered blocking state
+[30690.787401] br0: port 10(veth12) entered forwarding state
+[30690.834475] eth2: renamed from veth513b442
+[30690.839231] IPv6: ADDRCONF(NETDEV_CHANGE): veth4f367f3: link becomes ready
+[30690.846571] docker_gwbridge: port 9(veth4f367f3) entered blocking state
+[30690.852221] docker_gwbridge: port 9(veth4f367f3) entered forwarding state
+[30691.626725] br0: port 3(veth1) entered disabled state
+[30691.633987] veth4fd31db: renamed from eth0
+[30691.660172] br0: port 3(veth1) entered disabled state
+[30691.680576] device veth1 left promiscuous mode
+[30691.684539] br0: port 3(veth1) entered disabled state
+[30691.740018] br0: port 3(veth5) entered disabled state
+[30691.747253] veth0dc095f: renamed from eth1
+[30691.923307] eth0: renamed from veth2902577
+[30691.974418] docker_gwbridge: port 2(veth0d65d10) entered disabled state
+[30691.983022] veth4b2dea0: renamed from eth2
+[30692.028298] br0: port 4(veth2) entered disabled state
+[30692.034838] br0: port 9(veth8) entered blocking state
+[30692.039421] br0: port 9(veth8) entered forwarding state
+[30692.048220] veth41b3f46: renamed from eth0
+[30692.192553] eth1: renamed from veth4d35aa5
+[30692.236879] docker_gwbridge: port 2(veth0d65d10) entered disabled state
+[30692.263526] device veth0d65d10 left promiscuous mode
+[30692.268073] docker_gwbridge: port 2(veth0d65d10) entered disabled state
+[30692.295167] br0: port 5(veth13) entered blocking state
+[30692.299844] br0: port 5(veth13) entered forwarding state
+[30692.330976] br0: port 4(veth2) entered disabled state
+[30692.358964] device veth2 left promiscuous mode
+[30692.363785] br0: port 4(veth2) entered disabled state
+[30692.434781] eth2: renamed from veth9670f4b
+[30692.443611] br0: port 6(veth8) entered disabled state
+[30692.450177] veth9032ed6: renamed from eth1
+[30692.458528] br0: port 3(veth5) entered disabled state
+[30692.499028] device veth5 left promiscuous mode
+[30692.503143] br0: port 3(veth5) entered disabled state
+[30692.603275] IPv6: ADDRCONF(NETDEV_CHANGE): vethddbc022: link becomes ready
+[30692.621745] docker_gwbridge: port 7(vethddbc022) entered blocking state
+[30692.627175] docker_gwbridge: port 7(vethddbc022) entered forwarding state
+[30692.773473] eth0: renamed from veth7b00aa2
+[30692.792305] br0: port 6(veth6) entered blocking state
+[30692.796879] br0: port 6(veth6) entered forwarding state
+[30692.824738] vethba98a59: renamed from eth2
+[30692.833823] docker_gwbridge: port 5(veth144a64b) entered disabled state
+[30693.029349] eth2: renamed from vethcfd37b4
+[30693.040557] IPv6: ADDRCONF(NETDEV_CHANGE): vetha20316e: link becomes ready
+[30693.048529] docker_gwbridge: port 8(vetha20316e) entered blocking state
+[30693.054286] docker_gwbridge: port 8(vetha20316e) entered forwarding state
+[30693.113836] eth1: renamed from veth563d851
+[30693.133165] br0: port 9(veth11) entered blocking state
+[30693.137751] br0: port 9(veth11) entered forwarding state
+[30693.274118] docker_gwbridge: port 5(veth144a64b) entered disabled state
+[30693.309752] device veth144a64b left promiscuous mode
+[30693.314102] docker_gwbridge: port 5(veth144a64b) entered disabled state
+[30693.599466] eth2: renamed from veth2e76ee9
+[30693.622389] IPv6: ADDRCONF(NETDEV_CHANGE): veth0fdd4b3: link becomes ready
+[30693.632861] docker_gwbridge: port 4(veth0fdd4b3) entered blocking state
+[30693.638416] docker_gwbridge: port 4(veth0fdd4b3) entered forwarding state
+[30693.783332] br0: port 6(veth8) entered disabled state
+[30693.825812] device veth8 left promiscuous mode
+[30693.829603] br0: port 6(veth8) entered disabled state
+[30694.267988] br0: port 5(veth3) entered disabled state
+[30694.289783] vethe24b234: renamed from eth0
+[30694.364942] br0: port 5(veth3) entered disabled state
+[30694.383768] device veth3 left promiscuous mode
+[30694.387679] br0: port 5(veth3) entered disabled state
+[30694.432864] br0: port 4(veth6) entered disabled state
+[30694.439477] vethde3adf2: renamed from eth1
+[30694.472603] docker_gwbridge: port 3(veth3abd96e) entered disabled state
+[30694.490991] vethc839e90: renamed from eth2
+[30694.574646] docker_gwbridge: port 3(veth3abd96e) entered disabled state
+[30694.626164] device veth3abd96e left promiscuous mode
+[30694.630421] docker_gwbridge: port 3(veth3abd96e) entered disabled state
+[30694.715071] br0: port 4(veth6) entered disabled state
+[30694.732927] device veth6 left promiscuous mode
+[30694.736841] br0: port 4(veth6) entered disabled state
+[30801.545398] br0: port 6(veth6) entered disabled state
+[30801.550478] veth7b00aa2: renamed from eth0
+[30801.569040] br0: port 6(veth6) entered disabled state
+[30801.580123] device veth6 left promiscuous mode
+[30801.584828] br0: port 6(veth6) entered disabled state
+[30801.639971] br0: port 9(veth11) entered disabled state
+[30801.645062] veth563d851: renamed from eth1
+[30801.663708] docker_gwbridge: port 4(veth0fdd4b3) entered disabled state
+[30801.672700] veth2e76ee9: renamed from eth2
+[30801.698531] docker_gwbridge: port 4(veth0fdd4b3) entered disabled state
+[30801.709299] device veth0fdd4b3 left promiscuous mode
+[30801.713803] docker_gwbridge: port 4(veth0fdd4b3) entered disabled state
+[30801.738141] br0: port 9(veth11) entered disabled state
+[30801.747897] device veth11 left promiscuous mode
+[30801.752488] br0: port 9(veth11) entered disabled state
+[30838.427200] veth14: renamed from veth2b6cac6
+[30838.451765] br0: port 3(veth14) entered blocking state
+[30838.456552] br0: port 3(veth14) entered disabled state
+[30838.468395] device veth14 entered promiscuous mode
+[30838.480634] docker_gwbridge: port 2(veth60c1593) entered blocking state
+[30838.486666] docker_gwbridge: port 2(veth60c1593) entered disabled state
+[30838.497247] device veth60c1593 entered promiscuous mode
+[30838.517021] IPv6: ADDRCONF(NETDEV_UP): veth60c1593: link is not ready
+[30838.529879] docker_gwbridge: port 2(veth60c1593) entered blocking state
+[30838.535861] docker_gwbridge: port 2(veth60c1593) entered forwarding state
+[30838.659481] veth10: renamed from vethb229043
+[30838.665326] br0: port 3(veth10) entered blocking state
+[30838.670418] br0: port 3(veth10) entered disabled state
+[30838.691329] device veth10 entered promiscuous mode
+[30838.698892] br0: port 3(veth10) entered blocking state
+[30838.703953] br0: port 3(veth10) entered forwarding state
+[30839.413543] docker_gwbridge: port 2(veth60c1593) entered disabled state
+[30839.425931] br0: port 3(veth10) entered disabled state
+[30839.578378] eth0: renamed from veth8c9af8b
+[30839.584262] br0: port 3(veth10) entered blocking state
+[30839.589830] br0: port 3(veth10) entered forwarding state
+[30839.621250] eth1: renamed from veth55254d4
+[30839.625598] br0: port 3(veth14) entered blocking state
+[30839.630345] br0: port 3(veth14) entered forwarding state
+[30839.688710] eth2: renamed from veth1a58ead
+[30839.697717] IPv6: ADDRCONF(NETDEV_CHANGE): veth60c1593: link becomes ready
+[30839.704891] docker_gwbridge: port 2(veth60c1593) entered blocking state
+[30839.710910] docker_gwbridge: port 2(veth60c1593) entered forwarding state
+[30849.908251] veth11: renamed from vetheffa834
+[30849.932818] br0: port 4(veth11) entered blocking state
+[30849.937801] br0: port 4(veth11) entered disabled state
+[30849.966511] device veth11 entered promiscuous mode
+[30850.080134] docker_gwbridge: port 3(veth908ad28) entered blocking state
+[30850.086313] docker_gwbridge: port 3(veth908ad28) entered disabled state
+[30850.133826] device veth908ad28 entered promiscuous mode
+[30850.159367] IPv6: ADDRCONF(NETDEV_UP): veth908ad28: link is not ready
+[30850.175980] docker_gwbridge: port 3(veth908ad28) entered blocking state
+[30850.182264] docker_gwbridge: port 3(veth908ad28) entered forwarding state
+[30850.902069] docker_gwbridge: port 3(veth908ad28) entered disabled state
+[30851.727021] eth0: renamed from veth2912e89
+[30851.733417] br0: port 4(veth11) entered blocking state
+[30851.738362] br0: port 4(veth11) entered forwarding state
+[30851.894729] eth1: renamed from veth9e13ef7
+[30851.923859] IPv6: ADDRCONF(NETDEV_CHANGE): veth908ad28: link becomes ready
+[30851.930091] docker_gwbridge: port 3(veth908ad28) entered blocking state
+[30851.936212] docker_gwbridge: port 3(veth908ad28) entered forwarding state
